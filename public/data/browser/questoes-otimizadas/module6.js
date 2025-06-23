@@ -1,6 +1,6 @@
 window.module6 = {
   "id": 6,
-  "audio": "https://raw.githubusercontent.com/SEU-USUARIO/curso-mrs-certificacao/main/public/MRS/Audios/Curso%20MRS%20-%20Mod%206.mp3",
+  "audio": "https://raw.githubusercontent.com/gamabuntah/Curso_MRS/main/public/MRS/Audios/Curso%20MRS%20-%20Mod%206.mp3",
   "cards": [
     {
       "type": "default",
