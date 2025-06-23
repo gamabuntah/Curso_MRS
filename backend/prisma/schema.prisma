@@ -40,6 +40,7 @@ model mrs_certificates {
   finalScore Int?
   completedModules Int?
   status    String?
+  digitalSignature String?
   validationCount Int? @default(0)
   downloadCount Int? @default(0)
   revokedDate DateTime?
