@@ -1,0 +1,51 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model mrs_users {
+  id        Int     @id @default(autoincrement())
+  username  String  @unique
+  passwordHash String
+  role      String  @default("user")
+  progress  mrs_progress?
+  certificates mrs_certificates[]
+}
+
+model mrs_progress {
+  id        Int     @id @default(autoincrement())
+  user      mrs_users @relation(fields: [userId], references: [id])
+  userId    Int  @unique
+  modules   Json
+  final_evaluation Json
+  certificate Json
+  lastUpdated DateTime @default(now())
+}
+
+model mrs_certificates {
+  id        Int     @id @default(autoincrement())
+  username  String
+  validationCode String @unique
+  issuedDate DateTime
+  finalScore Int?
+  completedModules Int?
+  status    String?
+  validationCount Int? @default(0)
+  downloadCount Int? @default(0)
+  revokedDate DateTime?
+  revokedBy  String?
+  revokeReason String?
+  user      mrs_users? @relation(fields: [userId], references: [id])
+  userId    Int?
+}

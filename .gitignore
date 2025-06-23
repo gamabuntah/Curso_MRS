@@ -153,3 +153,4 @@ backup-quizzes/
 # Históricos e relatórios
 historico_*.md
 relatorio_*.json 
+/generated/prisma

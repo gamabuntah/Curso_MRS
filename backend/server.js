@@ -2,6 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
+const { PrismaClient } = require('@prisma/client');
+const prisma = new PrismaClient();
 
 const app = express();
 const PORT = process.env.PORT || 3002;
@@ -110,320 +112,290 @@ app.get('/api', (req, res) => {
 });
 
 // Rota de Registro
-app.post('/api/register', (req, res) => {
+app.post('/api/register', async (req, res) => {
   const { username, password } = req.body;
 
   if (!username || !password) {
     return res.status(400).json({ message: 'Nome de usuário e senha são obrigatórios.' });
   }
 
-  const db = readDB();
-  const userExists = db.users.find(user => user.username === username);
-
-  if (userExists) {
-    return res.status(409).json({ message: 'Este nome de usuário já existe.' });
+  try {
+    const userExists = await prisma.mrs_users.findUnique({ where: { username } });
+    if (userExists) {
+      return res.status(409).json({ message: 'Este nome de usuário já existe.' });
+    }
+    const newUser = await prisma.mrs_users.create({
+      data: {
+        username,
+        passwordHash: simpleHash(password),
+        role: username.toLowerCase() === 'admin' ? 'admin' : 'user',
+      },
+    });
+    // Inicializa o progresso para o novo usuário
+    await prisma.mrs_progress.create({
+      data: {
+        userId: newUser.id,
+        modules: {
+          "1": { status: "available", score: null, date: null, audioCompleted: false },
+          "2": { status: "locked", score: null, date: null, audioCompleted: false },
+          "3": { status: "locked", score: null, date: null, audioCompleted: false },
+          "4": { status: "locked", score: null, date: null, audioCompleted: false },
+          "5": { status: "locked", score: null, date: null, audioCompleted: false },
+          "6": { status: "locked", score: null, date: null, audioCompleted: false },
+          "7": { status: "locked", score: null, date: null, audioCompleted: false }
+        },
+        final_evaluation: { status: "locked", score: null, date: null },
+        certificate: { issued: false, date: null, final_score: null },
+        lastUpdated: new Date(),
+      },
+    });
+    res.status(201).json({ message: 'Usuário criado com sucesso! Agora você pode entrar.' });
+  } catch (error) {
+    res.status(500).json({ message: 'Erro ao registrar usuário.', error: error.message });
   }
-
-  const newUser = {
-    username,
-    passwordHash: simpleHash(password),
-    role: username.toLowerCase() === 'admin' ? 'admin' : 'user'
-  };
-
-  db.users.push(newUser);
-  // Inicializa o progresso para o novo usuário
-  db.progress[username] = {
-    modules: {
-      "1": { status: "available", score: null, date: null, audioCompleted: false },
-      "2": { status: "locked", score: null, date: null, audioCompleted: false },
-      "3": { status: "locked", score: null, date: null, audioCompleted: false },
-      "4": { status: "locked", score: null, date: null, audioCompleted: false },
-      "5": { status: "locked", score: null, date: null, audioCompleted: false },
-      "6": { status: "locked", score: null, date: null, audioCompleted: false },
-      "7": { status: "locked", score: null, date: null, audioCompleted: false }
-    },
-    final_evaluation: { status: "locked", score: null, date: null },
-    certificate: { issued: false, date: null, final_score: null },
-    lastUpdated: new Date().toISOString()
-  };
-  writeDB(db);
-
-  res.status(201).json({ message: 'Usuário criado com sucesso! Agora você pode entrar.' });
 });
 
 // Rota de Login
-app.post('/api/login', (req, res) => {
+app.post('/api/login', async (req, res) => {
   const { username, password } = req.body;
 
   if (!username || !password) {
     return res.status(400).json({ message: 'Nome de usuário e senha são obrigatórios.' });
   }
 
-  const db = readDB();
-  const user = db.users.find(user => user.username === username);
-
-  if (!user || user.passwordHash !== simpleHash(password)) {
-    return res.status(401).json({ message: 'Nome de usuário ou senha inválidos.' });
+  try {
+    const user = await prisma.mrs_users.findUnique({ where: { username } });
+    if (!user || user.passwordHash !== simpleHash(password)) {
+      return res.status(401).json({ message: 'Nome de usuário ou senha inválidos.' });
+    }
+    res.status(200).json({ 
+      message: 'Login bem-sucedido!', 
+      username: user.username,
+      role: user.role || 'user'
+    });
+  } catch (error) {
+    res.status(500).json({ message: 'Erro ao fazer login.', error: error.message });
   }
-
-  res.status(200).json({ 
-    message: 'Login bem-sucedido!', 
-    username: user.username,
-    role: user.role || 'user'
-  });
 });
 
 // Rota para OBTER o progresso de um usuário
-app.get('/api/progress/:username', (req, res) => {
+app.get('/api/progress/:username', async (req, res) => {
   const { username } = req.params;
-  const db = readDB();
-
-  // Validação simples para segurança
-  const user = db.users.find(u => u.username === username);
-  if (!user) {
-    return res.status(404).json({ message: 'Usuário não encontrado.' });
+  try {
+    const user = await prisma.mrs_users.findUnique({ where: { username } });
+    if (!user) {
+      return res.status(404).json({ message: 'Usuário não encontrado.' });
+    }
+    let userProgress = await prisma.mrs_progress.findUnique({ where: { userId: user.id } });
+    if (!userProgress) {
+      // Se não existir progresso, cria estrutura padrão
+      userProgress = await prisma.mrs_progress.create({
+        data: {
+          userId: user.id,
+          modules: {
+            "1": { status: "available", score: null, date: null, audioCompleted: false },
+            "2": { status: "locked", score: null, date: null, audioCompleted: false },
+            "3": { status: "locked", score: null, date: null, audioCompleted: false },
+            "4": { status: "locked", score: null, date: null, audioCompleted: false },
+            "5": { status: "locked", score: null, date: null, audioCompleted: false },
+            "6": { status: "locked", score: null, date: null, audioCompleted: false },
+            "7": { status: "locked", score: null, date: null, audioCompleted: false }
+          },
+          final_evaluation: { status: "locked", score: null, date: null },
+          certificate: { issued: false, date: null, final_score: null },
+          lastUpdated: new Date(),
+        },
+      });
+    }
+    res.status(200).json(userProgress);
+  } catch (error) {
+    res.status(500).json({ message: 'Erro ao obter progresso.', error: error.message });
   }
-
-  let userProgress = db.progress[username];
-  if (!userProgress || !userProgress.modules) {
-    // Se não existir progresso ou estiver vazio, retorna estrutura padrão
-    userProgress = {
-      modules: {
-        "1": { status: "available", score: null, date: null, audioCompleted: false },
-        "2": { status: "locked", score: null, date: null, audioCompleted: false },
-        "3": { status: "locked", score: null, date: null, audioCompleted: false },
-        "4": { status: "locked", score: null, date: null, audioCompleted: false },
-        "5": { status: "locked", score: null, date: null, audioCompleted: false },
-        "6": { status: "locked", score: null, date: null, audioCompleted: false },
-        "7": { status: "locked", score: null, date: null, audioCompleted: false }
-      },
-      final_evaluation: { status: "locked", score: null, date: null },
-      certificate: { issued: false, date: null, final_score: null },
-      lastUpdated: new Date().toISOString()
-    };
-    db.progress[username] = userProgress;
-    writeDB(db);
-  }
-  res.status(200).json(userProgress);
 });
 
 // Rota para SALVAR o progresso de um usuário
-app.post('/api/progress/:username', (req, res) => {
+app.post('/api/progress/:username', async (req, res) => {
   const { username } = req.params;
   const newProgress = req.body;
-
-  const db = readDB();
-  const user = db.users.find(u => u.username === username);
-  if (!user) {
-    return res.status(404).json({ message: 'Usuário não encontrado.' });
+  try {
+    const user = await prisma.mrs_users.findUnique({ where: { username } });
+    if (!user) {
+      return res.status(404).json({ message: 'Usuário não encontrado.' });
+    }
+    // Atualiza disponibilidade dos módulos
+    const updatedProgress = updateModuleAvailability(newProgress);
+    await prisma.mrs_progress.update({
+      where: { userId: user.id },
+      data: {
+        modules: updatedProgress.modules,
+        final_evaluation: updatedProgress.final_evaluation,
+        certificate: updatedProgress.certificate,
+        lastUpdated: new Date(),
+      },
+    });
+    res.status(200).json({ message: 'Progresso salvo com sucesso.' });
+  } catch (error) {
+    res.status(500).json({ message: 'Erro ao salvar progresso.', error: error.message });
   }
-
-  db.progress[username] = updateModuleAvailability(newProgress);
-  writeDB(db);
-
-  res.status(200).json({ message: 'Progresso salvo com sucesso.' });
 });
 
 // --- ROTAS DE CERTIFICADOS ---
 
 // Rota para GERAR um certificado
-app.post('/api/certificates/:username', (req, res) => {
+app.post('/api/certificates/:username', async (req, res) => {
   const { username } = req.params;
   const certificateData = req.body;
-
-  const db = readDB();
-  const user = db.users.find(u => u.username === username);
-  if (!user) {
-    return res.status(404).json({ message: 'Usuário não encontrado.' });
-  }
-
-  // Permite que admin gere certificado livremente
-  if (user.role === 'admin') {
-    // Remove qualquer certificado anterior do admin
-    if (db.certificates) {
-      for (const code of Object.keys(db.certificates)) {
-        if (db.certificates[code].username === username) {
-          delete db.certificates[code];
-        }
-      }
-    } else {
-      db.certificates = {};
+  try {
+    const user = await prisma.mrs_users.findUnique({ where: { username } });
+    if (!user) {
+      return res.status(404).json({ message: 'Usuário não encontrado.' });
     }
-    db.certificates[certificateData.validationCode] = certificateData;
-    writeDB(db);
-    return res.status(201).json(certificateData);
+    // Permite que admin gere certificado livremente
+    if (user.role === 'admin') {
+      await prisma.mrs_certificates.deleteMany({ where: { username } });
+      const cert = await prisma.mrs_certificates.create({ data: { ...certificateData, username, userId: user.id, issuedDate: new Date() } });
+      return res.status(201).json(cert);
+    }
+    // Verifica se já existe um certificado para este usuário
+    const existingCertificate = await prisma.mrs_certificates.findFirst({ where: { username } });
+    if (existingCertificate) {
+      return res.status(409).json({ message: 'Usuário já possui um certificado.', certificate: existingCertificate });
+    }
+    // Salva o certificado
+    const cert = await prisma.mrs_certificates.create({ data: { ...certificateData, username, userId: user.id, issuedDate: new Date() } });
+    res.status(201).json(cert);
+  } catch (error) {
+    res.status(500).json({ message: 'Erro ao gerar certificado.', error: error.message });
   }
-
-  // Verifica se já existe um certificado para este usuário
-  const existingCertificate = Object.values(db.certificates || {}).find(
-    cert => cert.username === username
-  );
-
-  if (existingCertificate) {
-    return res.status(409).json({ 
-      message: 'Usuário já possui um certificado.',
-      certificate: existingCertificate
-    });
-  }
-
-  // Salva o certificado
-  if (!db.certificates) db.certificates = {};
-  db.certificates[certificateData.validationCode] = certificateData;
-  writeDB(db);
-
-  res.status(201).json(certificateData);
 });
 
 // Rota para OBTER certificado de um usuário
-app.get('/api/certificates/:username', (req, res) => {
+app.get('/api/certificates/:username', async (req, res) => {
   const { username } = req.params;
-  const db = readDB();
-
-  const user = db.users.find(u => u.username === username);
-  if (!user) {
-    return res.status(404).json({ message: 'Usuário não encontrado.' });
+  try {
+    const user = await prisma.mrs_users.findUnique({ where: { username } });
+    if (!user) {
+      return res.status(404).json({ message: 'Usuário não encontrado.' });
+    }
+    const certificate = await prisma.mrs_certificates.findFirst({ where: { username } });
+    if (!certificate) {
+      return res.status(404).json({ message: 'Certificado não encontrado.' });
+    }
+    res.status(200).json(certificate);
+  } catch (error) {
+    res.status(500).json({ message: 'Erro ao obter certificado.', error: error.message });
   }
-
-  const certificate = Object.values(db.certificates || {}).find(
-    cert => cert.username === username
-  );
-
-  if (!certificate) {
-    return res.status(404).json({ message: 'Certificado não encontrado.' });
-  }
-
-  res.status(200).json(certificate);
 });
 
 // Rota para VALIDAR um certificado pelo código
-app.get('/api/certificates/validate/:validationCode', (req, res) => {
+app.get('/api/certificates/validate/:validationCode', async (req, res) => {
   const { validationCode } = req.params;
-  const db = readDB();
-
-  const certificate = db.certificates[validationCode];
-  if (!certificate) {
-    return res.status(404).json({ 
-      valid: false, 
-      error: 'Certificado não encontrado' 
-    });
-  }
-
-  // Incrementa contador de validações
-  certificate.validationCount = (certificate.validationCount || 0) + 1;
-  writeDB(db);
-
-  res.status(200).json({
-    valid: true,
-    certificate: {
-      username: certificate.username,
-      issuedDate: certificate.issuedDate,
-      finalScore: certificate.finalScore,
-      completedModules: certificate.completedModules,
-      status: certificate.status,
-      validationCount: certificate.validationCount
+  try {
+    const certificate = await prisma.mrs_certificates.findUnique({ where: { validationCode } });
+    if (!certificate) {
+      return res.status(404).json({ valid: false, error: 'Certificado não encontrado' });
     }
-  });
+    await prisma.mrs_certificates.update({ where: { validationCode }, data: { validationCount: (certificate.validationCount || 0) + 1 } });
+    res.status(200).json({
+      valid: true,
+      certificate: {
+        username: certificate.username,
+        issuedDate: certificate.issuedDate,
+        finalScore: certificate.finalScore,
+        completedModules: certificate.completedModules,
+        status: certificate.status,
+        validationCount: (certificate.validationCount || 0) + 1
+      }
+    });
+  } catch (error) {
+    res.status(500).json({ message: 'Erro ao validar certificado.', error: error.message });
+  }
 });
 
 // Rota para incrementar download count
-app.post('/api/certificates/:username/download', (req, res) => {
+app.post('/api/certificates/:username/download', async (req, res) => {
   const { username } = req.params;
-  const db = readDB();
-
-  const certificate = Object.values(db.certificates || {}).find(
-    cert => cert.username === username
-  );
-
-  if (certificate) {
-    certificate.downloadCount = (certificate.downloadCount || 0) + 1;
-    writeDB(db);
+  try {
+    const certificate = await prisma.mrs_certificates.findFirst({ where: { username } });
+    if (certificate) {
+      await prisma.mrs_certificates.update({ where: { id: certificate.id }, data: { downloadCount: (certificate.downloadCount || 0) + 1 } });
+    }
+    res.status(200).json({ message: 'Download count atualizado.' });
+  } catch (error) {
+    res.status(500).json({ message: 'Erro ao atualizar download count.', error: error.message });
   }
-
-  res.status(200).json({ message: 'Download count atualizado.' });
 });
 
 // Rota para REVOGAR um certificado (apenas admin)
-app.post('/api/certificates/:username/revoke', (req, res) => {
+app.post('/api/certificates/:username/revoke', async (req, res) => {
   const { username } = req.params;
   const { reason } = req.body;
   const adminUser = req.query.adminUser;
-  const db = readDB();
-  
-  // Verifica se é admin
-  const requester = db.users.find(u => u.username === adminUser);
-  if (!requester || requester.role !== 'admin') {
-    return res.status(403).json({ error: 'Acesso negado. Apenas administradores.' });
-  }
-  
   try {
-    // Garante que db.certificates exista antes de acessá-lo
-    if (!db.certificates) {
-      return res.status(404).json({ error: 'Nenhum certificado encontrado no sistema.' });
+    const requester = await prisma.mrs_users.findUnique({ where: { username: adminUser } });
+    if (!requester || requester.role !== 'admin') {
+      return res.status(403).json({ error: 'Acesso negado. Apenas administradores.' });
     }
-
-    const certCode = Object.keys(db.certificates).find(code => db.certificates[code].username === username);
-    
-    if (!certCode) {
+    const cert = await prisma.mrs_certificates.findFirst({ where: { username } });
+    if (!cert) {
       return res.status(404).json({ error: `Certificado para o usuário '${username}' não encontrado.` });
     }
-    
-    db.certificates[certCode].status = 'revoked';
-    db.certificates[certCode].revokedDate = new Date().toISOString();
-    db.certificates[certCode].revokedBy = adminUser;
-    db.certificates[certCode].revokeReason = reason || 'Revogado pelo administrador';
-    
-    // Salva no arquivo
-    writeDB(db);
-    
-    res.json({ message: 'Certificado revogado com sucesso', certificate: db.certificates[certCode] });
+    const updated = await prisma.mrs_certificates.update({
+      where: { id: cert.id },
+      data: {
+        status: 'revoked',
+        revokedDate: new Date(),
+        revokedBy: adminUser,
+        revokeReason: reason || 'Revogado pelo administrador'
+      }
+    });
+    res.json({ message: 'Certificado revogado com sucesso', certificate: updated });
   } catch (error) {
-    console.error('Erro ao revogar certificado:', error);
-    res.status(500).json({ error: 'Erro interno do servidor' });
+    res.status(500).json({ error: 'Erro ao revogar certificado', details: error.message });
   }
 });
 
 // --- ROTAS DE ADMINISTRAÇÃO ---
 
 // Rota de Admin para ver TODOS os certificados
-app.get('/api/admin/all-certificates', (req, res) => {
-    const { adminUser } = req.query;
-    const db = readDB();
-    const requester = db.users.find(u => u.username === adminUser);
-
+app.get('/api/admin/all-certificates', async (req, res) => {
+  const { adminUser } = req.query;
+  try {
+    const requester = await prisma.mrs_users.findUnique({ where: { username: adminUser } });
     if (!requester || requester.role !== 'admin') {
-        return res.status(403).json({ message: 'Acesso negado.' });
+      return res.status(403).json({ message: 'Acesso negado.' });
     }
-
-    const allCertificates = Object.values(db.certificates || {});
+    const allCertificates = await prisma.mrs_certificates.findMany();
     res.status(200).json(allCertificates);
+  } catch (error) {
+    res.status(500).json({ message: 'Erro ao listar certificados.', error: error.message });
+  }
 });
 
 // Rota de Admin para ver o progresso de TODOS os usuários
-app.get('/api/admin/all-progress', (req, res) => {
-    const { adminUser } = req.query;
-    const db = readDB();
-    const requester = db.users.find(u => u.username === adminUser);
-
+app.get('/api/admin/all-progress', async (req, res) => {
+  const { adminUser } = req.query;
+  try {
+    const requester = await prisma.mrs_users.findUnique({ where: { username: adminUser } });
     if (!requester || requester.role !== 'admin') {
-        return res.status(403).json({ message: 'Acesso negado.' });
+      return res.status(403).json({ message: 'Acesso negado.' });
     }
-
-    const allProgressWithDetails = Object.keys(db.progress).map(username => {
-        const userProgress = db.progress[username];
-        const completedModules = userProgress.modules 
-            ? Object.values(userProgress.modules).filter(m => m.status === 'completed').length 
-            : 0;
-        const progressPercent = Math.round((completedModules / 8) * 100);
-        
-        return {
-            username,
-            progressPercent,
-            completedModules,
-            finalEvaluationScore: userProgress.final_evaluation?.score ?? 'N/A'
-        };
+    const progresses = await prisma.mrs_progress.findMany({ include: { user: true } });
+    const allProgressWithDetails = progresses.map(progress => {
+      const modules = progress.modules || {};
+      const completedModules = Object.values(modules).filter(m => m.status === 'completed').length;
+      const progressPercent = Math.round((completedModules / 8) * 100);
+      return {
+        username: progress.user.username,
+        progressPercent,
+        completedModules,
+        finalEvaluationScore: progress.final_evaluation?.score ?? 'N/A'
+      };
     });
-    
     res.status(200).json(allProgressWithDetails);
+  } catch (error) {
+    res.status(500).json({ message: 'Erro ao listar progresso.', error: error.message });
+  }
 });
 
 app.listen(PORT, () => {
