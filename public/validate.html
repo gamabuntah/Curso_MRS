@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar Certificado - Curso MRS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .validation-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 2.5em;
+            color: #2980b9;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+
+        .subtitle {
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .validation-form {
+            margin-bottom: 30px;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .validation-input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .validation-input:focus {
+            outline: none;
+            border-color: #2980b9;
+            box-shadow: 0 0 0 3px rgba(41, 128, 185, 0.1);
+        }
+
+        .validation-input::placeholder {
+            color: #bdc3c7;
+        }
+
+        .validate-btn {
+            background: linear-gradient(135deg, #2980b9, #3498db);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .validate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(41, 128, 185, 0.3);
+        }
+
+        .validate-btn:disabled {
+            background: #bdc3c7;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .result-container {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            display: none;
+        }
+
+        .result-valid {
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            color: white;
+        }
+
+        .result-invalid {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+        }
+
+        .result-loading {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+            color: white;
+        }
+
+        .result-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .result-title {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .result-details {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+
+        .certificate-info {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            text-align: left;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .info-label {
+            font-weight: 600;
+        }
+
+        .info-value {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .footer {
+            margin-top: 30px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        .footer a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 480px) {
+            .validation-container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .logo {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="validation-container">
+        <div class="logo">
+            <i class="fa-solid fa-certificate"></i>
+        </div>
+        
+        <h1>Validação de Certificado MRS</h1>
+        <p class="subtitle">Verifique a autenticidade do seu certificado</p>
+
+        <form class="validation-form" id="validationForm">
+            <div class="input-group">
+                <input 
+                    type="text" 
+                    class="validation-input" 
+                    id="certificateCode"
+                    placeholder="Digite o código do certificado (ex: MRS-2024-XXXX-XXXX)"
+                    required
+                >
+            </div>
+            
+            <button type="submit" class="validate-btn" id="validateBtn">
+                <i class="fa-solid fa-search"></i> Validar Certificado
+            </button>
+        </form>
+
+        <div class="result-container" id="resultContainer">
+            <div class="result-icon" id="resultIcon"></div>
+            <div class="result-title" id="resultTitle"></div>
+            <div class="result-details" id="resultDetails"></div>
+            <div class="certificate-info" id="certificateInfo" style="display: none;"></div>
+        </div>
+
+        <div class="footer">
+            <p>Sistema de Certificação MRS - capacitação em manejo de resíduos sólidos</p>
+            <p>Para dúvidas, entre em contato: <a href="mailto:suporte@mrs.gov.br">suporte@mrs.gov.br</a></p>
+        </div>
+    </div>
+
+    <script>
+        const validationForm = document.getElementById('validationForm');
+        const certificateCode = document.getElementById('certificateCode');
+        const validateBtn = document.getElementById('validateBtn');
+        const resultContainer = document.getElementById('resultContainer');
+        const resultIcon = document.getElementById('resultIcon');
+        const resultTitle = document.getElementById('resultTitle');
+        const resultDetails = document.getElementById('resultDetails');
+        const certificateInfo = document.getElementById('certificateInfo');
+
+        // Extrai código da URL se presente
+        const urlParams = new URLSearchParams(window.location.search);
+        const codeFromUrl = urlParams.get('code');
+        if (codeFromUrl) {
+            certificateCode.value = codeFromUrl;
+        }
+
+        validationForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const code = certificateCode.value.trim();
+            if (!code) {
+                showResult('invalid', 'Código inválido', 'Por favor, digite um código de certificado válido.');
+                return;
+            }
+
+            await validateCertificate(code);
+        });
+
+        async function validateCertificate(code) {
+            // Mostra loading
+            showResult('loading', 'Validando...', 'Verificando a autenticidade do certificado...');
+            validateBtn.disabled = true;
+
+            try {
+                const response = await fetch(`http://localhost:3002/api/certificates/validate/${code}`);
+                const data = await response.json();
+
+                if (data.valid) {
+                    showValidResult(data.certificate);
+                } else {
+                    showResult('invalid', 'Certificado Inválido', data.error || 'Certificado não encontrado ou revogado.');
+                }
+            } catch (error) {
+                console.error('Erro na validação:', error);
+                showResult('invalid', 'Erro na Validação', 'Ocorreu um erro ao validar o certificado. Tente novamente.');
+            } finally {
+                validateBtn.disabled = false;
+            }
+        }
+
+        function showValidResult(certificate) {
+            const issuedDate = new Date(certificate.issuedDate);
+            const formattedDate = issuedDate.toLocaleDateString('pt-BR');
+
+            resultIcon.innerHTML = '<i class="fa-solid fa-check-circle"></i>';
+            resultTitle.textContent = 'Certificado Válido!';
+            resultDetails.innerHTML = `
+                <p>Este certificado foi emitido pelo Sistema MRS e é válido.</p>
+                <p><strong>Participante:</strong> ${certificate.username}</p>
+            `;
+
+            certificateInfo.innerHTML = `
+                <div class="info-row">
+                    <span class="info-label">Data de Emissão:</span>
+                    <span class="info-value">${formattedDate}</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Pontuação Final:</span>
+                    <span class="info-value">${certificate.finalScore}%</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Módulos Concluídos:</span>
+                    <span class="info-value">${certificate.completedModules}/8</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Status:</span>
+                    <span class="info-value">${certificate.status === 'issued' ? 'Emitido' : 'Revogado'}</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Validações:</span>
+                    <span class="info-value">${certificate.validationCount || 0} vezes</span>
+                </div>
+            `;
+
+            showResult('valid');
+            certificateInfo.style.display = 'block';
+        }
+
+        function showResult(type, title, details) {
+            resultContainer.className = `result-container result-${type}`;
+            
+            if (type === 'loading') {
+                resultIcon.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>';
+            } else if (type === 'valid') {
+                resultIcon.innerHTML = '<i class="fa-solid fa-check-circle"></i>';
+            } else if (type === 'invalid') {
+                resultIcon.innerHTML = '<i class="fa-solid fa-times-circle"></i>';
+            }
+
+            if (title) resultTitle.textContent = title;
+            if (details) resultDetails.textContent = details;
+            
+            resultContainer.style.display = 'block';
+            certificateInfo.style.display = 'none';
+        }
+
+        // Auto-validate if code is in URL
+        if (codeFromUrl) {
+            validationForm.dispatchEvent(new Event('submit'));
+        }
+    </script>
+</body>
+</html> 

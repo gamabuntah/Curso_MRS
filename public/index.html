@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso MRS - Manejo de Resíduos Sólidos</title>
+  <link rel="stylesheet" href="style.css?v=5.4"> <!-- Cache Buster -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <script>
+    // Proteção de Rota: redireciona para login se não estiver autenticado
+    const currentUser = sessionStorage.getItem('currentUser');
+    if (!currentUser) {
+      window.location.href = 'login.html';
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Barra Lateral de Navegação -->
+  <aside class="sidebar">
+    <div class="logo">Curso MRS</div>
+    <nav id="sidebar-nav">
+      <!-- Links dos módulos serão inseridos aqui pelo JS -->
+    </nav>
+    <div class="sidebar-footer">
+      <button id="logout-btn" class="logout-btn">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i> Sair
+      </button>
+    </div>
+  </aside>
+
+  <!-- Conteúdo Principal -->
+  <div class="page-container">
+    <!-- Indicador de Progresso movido para cá -->
+    <div class="progress-indicator">0%</div>
+    
+    <header class="topbar">
+      <button class="sidebar-toggle" onclick="document.body.classList.toggle('sidebar-open')">
+        ☰
+      </button>
+      <div class="topbar-title">Capacitação em Manejo de Resíduos Sólidos</div>
+    </header>
+
+    <!-- Área Central -->
+    <main class="main-content">
+      <h1 id="module-title"></h1>
+      <div id="content">
+        <!-- Os cards do conteúdo serão inseridos aqui pelo JS -->
+      </div>
+      <div id="quiz-container" class="quiz-container"></div>
+      <div id="final-quiz-intro-container"></div>
+      <div id="final-quiz-container" class="quiz-container"></div>
+      <div id="final-score-container" class="final-score-container"></div>
+    </main>
+
+    <!-- Player de Áudio -->
+    <div id="audio-player" class="audio-player">
+      <div id="player-module-title"></div> <!-- Título do Módulo no Player -->
+      <audio id="audio-element"></audio>
+      <div class="player-controls">
+        <div class="main-controls">
+          <button id="rewind-btn" title="Retroceder 10s"></button>
+          <button id="play-pause-btn" class="play-btn" title="Play/Pause"></button>
+          <button id="forward-btn" title="Avançar 10s"></button>
+        </div>
+        
+        <div class="progress-wrapper">
+          <span id="current-time">0:00</span>
+          <div id="progress-bar" class="progress-bar">
+            <div id="progress" class="progress"></div>
+          </div>
+          <span id="duration">0:00</span>
+        </div>
+
+        <div class="volume-container">
+          <button id="volume-btn" class="volume-btn" title="Mudo"></button>
+          <input type="range" id="volume-slider" class="volume-slider" min="0" max="1" step="0.01" value="1">
+        </div>
+        <div class="speed-control">
+          <button id="speed-btn" title="Velocidade">1x</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Data Scripts -->
+  <script src="data/browser/questoes-otimizadas/module1.js"></script>
+  <script src="data/browser/questoes-otimizadas/module2.js"></script>
+  <script src="data/browser/questoes-otimizadas/module3.js"></script>
+  <script src="data/browser/questoes-otimizadas/module4.js"></script>
+  <script src="data/browser/questoes-otimizadas/module5.js"></script>
+  <script src="data/browser/questoes-otimizadas/module6.js"></script>
+  <script src="data/browser/questoes-otimizadas/module7.js"></script>
+  <script src="data/browser/questoes-otimizadas/avaliacaoFinal.js"></script>
+
+  <!-- Progress Manager Script -->
+  <script src="progress-manager.js"></script>
+
+  <!-- Certificate System Scripts -->
+  <script src="certificate-manager.js"></script>
+  <script src="certificate-generator.js"></script>
+
+  <!-- jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <!-- QRCode.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <!-- Main App Script -->
+  <script src="script.js?v=5.4"></script> <!-- Cache Buster -->
+</body>
+</html> 

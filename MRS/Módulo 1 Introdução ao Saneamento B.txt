@@ -1,0 +1,91 @@
+Módulo 1: Introdução ao Saneamento Básico e à PNSB [2]
+
+
+Resumo
+O Módulo Introdutório sobre Saneamento Básico e a Pesquisa Nacional de Saneamento Básico (PNSB) apresenta os componentes essenciais do saneamento básico, como abastecimento de água, esgotamento sanitário, limpeza urbana e drenagem pluvial, definidos pela Lei nº 11.445/2007. Ele detalha a PNSB como um levantamento fundamental do IBGE para coletar dados sobre limpeza urbana, manejo de resíduos sólidos e drenagem, com o objetivo de gerar indicadores para todos os municípios brasileiros. O texto também relaciona a PNSB com o monitoramento dos Objetivos de Desenvolvimento Sustentável (ODS), especialmente os ODS 11 e 12, que tratam de cidades sustentáveis e consumo responsável, e descreve as atividades de capacitação necessárias para a correta coleta de informações da pesquisa.
+
+
+1.1 Definição e Componentes do Saneamento Básico
+O saneamento básico é um conjunto de serviços, infraestruturas e instalações operacionais essenciais, definidos pelo Art. 3º da Lei nº 11.445/2007 [2, 3]. Esses serviços contribuem diretamente para a saúde humana e a preservação ambiental, sendo um elemento fundamental para o bem-estar social [4].
+Os componentes do saneamento básico incluem [2, 3]:
+•
+Abastecimento de água [2, 3].
+•
+Esgotamento sanitário [2, 3].
+•
+Limpeza urbana e manejo de resíduos sólidos [2, 3].
+•
+Drenagem e manejo de águas pluviais [2, 3].
+1.2 Fontes de Informação sobre Saneamento no Brasil
+Para obter informações sobre saneamento no Brasil, existem diferentes fontes, que podem ser classificadas por demanda ou oferta [5]:
+•
+Pesquisas Domiciliares (demanda) [5]:
+◦
+Pesquisa Nacional por Amostra de Domicílios Contínua (PNAD/IBGE) [5].
+◦
+Censo Demográfico (CD/IBGE) [5].
+•
+Pesquisas de Estabelecimentos (oferta) [5]:
+◦
+Pesquisa Nacional de Saneamento Básico (PNSB/IBGE) [5].
+◦
+Sistema Nacional de Informações sobre Saneamento (SNIS/Ministério das Cidades) [5].
+O Manual de Coleta da PNSB 2024 aborda a própria Pesquisa Nacional de Saneamento Básico, mas não detalha as outras fontes de informação mencionadas (PNAD, Censo Demográfico e SNIS) [6-15].
+1.3 Pesquisa Nacional de Saneamento Básico (PNSB)
+A Pesquisa Nacional de Saneamento Básico (PNSB) é um levantamento fundamental realizado pelo Instituto Brasileiro de Geografia e Estatística (IBGE) [4, 6].
+•
+Objetivo: A PNSB 2024 tem como objetivo principal obter informações de entidades públicas e privadas que atuam na oferta dos serviços de Limpeza Urbana e Manejo de Resíduos Sólidos e Drenagem e Manejo de Águas Pluviais [5, 16]. Isso inclui o levantamento de aspectos legais, serviços prestados e ações de educação ambiental [16]. Com esses resultados, o IBGE visa formular e disponibilizar indicadores que apresentem um cenário atualizado desses serviços em todos os municípios brasileiros, permitindo análises das condições ambientais e suas implicações diretas na saúde e qualidade de vida da população [16, 17].
+•
+Âmbito e Unidade de Investigação: A PNSB 2024 investiga prestadores de serviços coletivos com Cadastro Nacional de Pessoas Jurídicas (CNPJ) em cada município pesquisado [17, 18]. O âmbito da pesquisa engloba prestadores de serviços de limpeza urbana e manejo de resíduos sólidos que executam qualquer um dos seguintes serviços: coleta convencional de resíduos sólidos domésticos ou públicos, coleta seletiva, varrição, capina e/ou raspagem de vias e logradouros públicos, demais serviços de limpeza urbana, coleta/recebimento de resíduos especiais, coleta de resíduos sujeitos à logística reversa, limpeza de estruturas de drenagem de águas pluviais, limpeza de praias, processamento de resíduos secos ou orgânicos, e disposição final [17, 19]. Para a drenagem e manejo de águas pluviais, são incluídos prestadores que atuam em áreas rurais ou urbanas, desempenhando atividades como mapeamento de áreas de risco, cadastro, planejamento, projeto, instalação, ampliação, adequação, monitoramento, manutenção e operação de infraestrutura de drenagem e manejo de águas pluviais, em ruas pavimentadas ou não, corpos d'água, ou dispositivos específicos [19, 20].
+•
+Abrangência geográfica: A PNSB 2024 busca obter informações dos prestadores de serviços em todos os 5.570 municípios brasileiros existentes no território nacional em 2024 [18, 21]. Por razões metodológicas, o Distrito Federal e o Distrito Estadual de Fernando de Noronha são tratados como municípios na pesquisa [22].
+•
+Histórico da PNSB: O IBGE realiza levantamentos nacionais sobre a oferta de saneamento básico no Brasil desde 1974 [4]. A PNSB foi aplicada pela primeira vez em 1974 e, posteriormente, em 1977, 1989, 2000 e 2008 [4, 18]. Com o tempo, a pesquisa passou por reformulações, e o IBGE assumiu gradualmente a responsabilidade pela coleta, elaboração e desenvolvimento dos instrumentos de investigação [4, 18]. A partir de 2015, a PNSB foi incluída no orçamento do IBGE para se tornar uma pesquisa regular, com coleta de informações estruturada por módulos [18, 23].
+•
+Configuração Atual da PNSB: A pesquisa é configurada em ciclos de coleta (Suplemento, Temático) e divulgação [24]. Em 2017, a PNSB focou no abastecimento de água e esgotamento sanitário (gestão da política e aspectos técnicos) [18, 23, 24]. A etapa de coleta para os serviços de limpeza urbana e manejo de resíduos sólidos, e drenagem e manejo de águas pluviais, iniciou em 2023 com o questionário voltado à gestão, e a etapa técnica será concluída em 2025, encerrando este ciclo da pesquisa [6, 23, 25, 26]. O Manual da PNSB 2024 é especificamente para a coleta de informações sobre Limpeza Urbana e Manejo de Resíduos Sólidos e Drenagem e Manejo de Águas Pluviais [6].
+•
+Atlas de Saneamento (PNSB 2017): A PNSB 2017 resultou na publicação do Atlas de Saneamento, que oferece uma leitura geográfica, abrangência, qualidade das redes, e a relação com o meio ambiente e saúde pública [27]. O Manual da PNSB 2024 não menciona o Atlas de Saneamento.
+1.4 A PNSB e os Objetivos de Desenvolvimento Sustentável (ODS)
+A Pesquisa Nacional de Saneamento Básico (PNSB) serve como um instrumento crucial para o monitoramento dos Objetivos de Desenvolvimento Sustentável (ODS) da Organização das Nações Unidas (ONU) [24]. O Manual de Coleta da PNSB 2024 não detalha a relação da pesquisa com os ODS.
+Os ODS relevantes que a PNSB ajuda a monitorar incluem [24]:
+•
+ODS 11: Cidades e assentamentos humanos inclusivos, seguros, resilientes e sustentáveis [24]. Este objetivo possui metas como:
+◦
+Meta 11.5: Redução de mortes e perdas econômicas causadas por catástrofes hídricas [28].
+◦
+Meta 11.6: Redução do impacto ambiental negativo per capita das cidades (focando na qualidade do ar e na gestão de resíduos) [29].
+◦
+Meta 11.7: Assegurar acesso universal a espaços públicos seguros e inclusivos [29].
+◦
+Meta 11.a: Apoiar relações econômicas, sociais e ambientais positivas entre áreas urbanas, periurbanas e rurais [29].
+◦
+Meta 11.b: Aumentar o número de cidades e assentamentos humanos que adotam e implementam políticas e planos integrados para a resiliência a desastres [30].
+•
+ODS 12: Assegurar padrões de produção e de consumo sustentáveis [30]. Este objetivo inclui metas como:
+◦
+Meta 12.4: Alcançar o manejo ambientalmente saudável de produtos químicos e de todos os resíduos ao longo de seu ciclo de vida [31].
+◦
+Meta 12.5: Reduzir substancialmente a geração de resíduos por meio da prevenção, redução, reciclagem e reuso [31].
+◦
+Meta 12.8: Assegurar que as pessoas, em todos os lugares, tenham informação e consciência pertinentes para o desenvolvimento sustentável e estilos de vida em harmonia com a natureza [32].
+1.5 Planejamento e Capacitação para a PNSB
+A preparação para a PNSB envolve diversas atividades para garantir a correta coleta das informações [25]. Embora o Manual de Coleta da PNSB 2024 forneça "Orientações Gerais para o Preenchimento do Questionário" [22] e saliente que é "indispensável para o correto preenchimento dos blocos" [22, 33], ele não descreve as atividades de capacitação listadas a seguir.
+As atividades de preparação para a PNSB incluem [25]:
+•
+Leitura de leis e instrumentos relacionados ao saneamento [32].
+•
+Realização de estudos aprofundados sobre o tema [32].
+•
+Participação em eventos como Webinars, Congressos e Seminários [34].
+•
+Realização de reuniões e visitas técnicas [34].
+Exemplos de visitas técnicas que podem ser realizadas para a capacitação incluem [34, 35]:
+•
+Aterros sanitários [34].
+•
+Equipamentos de drenagem [34].
+•
+Jardins filtrantes [35].
+•
+Cooperativas de catadores [35].
+--------------------------------------------------------------------------------

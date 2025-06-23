@@ -1,0 +1,350 @@
+Saneamento Básico e a PNSB: Curso Completo
+Com base nos detalhes fornecidos na apresentação em PDF, elaborei uma estrutura completa para um curso sobre Saneamento Básico, com foco particular na Pesquisa Nacional de Saneamento Básico (PNSB) e no Manejo de Resíduos Sólidos (MRS), dividido por módulos e tópicos detalhados.
+--------------------------------------------------------------------------------
+Estrutura Completa do Curso: Saneamento Básico e a Pesquisa Nacional de Saneamento Básico (PNSB)
+Carga Horária Estimada: 40 horas (sugestão)
+Público-Alvo: Gestores municipais, técnicos de saneamento, estudantes, pesquisadores e profissionais interessados na área.
+--------------------------------------------------------------------------------
+Módulo 1: Introdução ao Saneamento Básico e à PNSB
+•
+1.1 Definição e Componentes do Saneamento Básico
+◦
+Conceito de saneamento assegurado pela Lei nº 11.445/2007 [1].
+◦
+Serviços, infraestrutura e instalações operacionais: [1] * Abastecimento de água [1]. * Esgotamento sanitário [1]. * Limpeza urbana e manejo de resíduos sólidos [1]. * Drenagem e manejo de águas pluviais [1].
+•
+1.2 Fontes de Informação sobre Saneamento no Brasil
+◦
+Pesquisas Domiciliares (demanda): [1, 2] * Pesquisa Nacional por Amostra de Domicílios Contínua (PNAD/IBGE) [1]. * Censo Demográfico (CD/IBGE) [1].
+◦
+Pesquisas de Estabelecimentos (oferta): [2] * Pesquisa Nacional de Saneamento Básico (PNSB/IBGE) [2]. * Sistema Nacional de Informações sobre Saneamento (SNIS/Ministério das Cidades) [2].
+•
+1.3 Pesquisa Nacional de Saneamento Básico (PNSB)
+◦
+Objetivo: Obter informações de prestadores de serviços de saneamento [2].
+◦
+Âmbito e Unidade de Investigação: Prestadores de serviços coletivos com CNPJ em cada Município pesquisado [3].
+◦
+Abrangência geográfica: Todos os 5.571 Municípios brasileiros [3].
+◦
+Histórico da PNSB: [4] * Evolução da responsabilidade do IBGE [4]. * Inclusão no orçamento do IBGE e configuração em ciclos a partir de 2015 [4].
+◦
+Configuração Atual da PNSB: [5] * Ciclos de coleta (Suplemento, Temático) e divulgação [5]. * Pesquisa Nacional de Saneamento Básico - 2017: Foco em Abastecimento de Água e Esgotamento Sanitário [4, 5]. * Pesquisa Nacional de Saneamento Básico - 2024: Foco em Manejo de Águas Pluviais e Manejo de Resíduos Sólidos [6].
+◦
+Atlas de Saneamento (PNSB 2017): Leitura geográfica, abrangência, qualidade das redes, meio ambiente e saúde pública [7].
+•
+1.4 A PNSB e os Objetivos de Desenvolvimento Sustentável (ODS)
+◦
+A PNSB como instrumento para monitorar os ODS da ONU [8].
+◦
+ODS 11: Cidades e assentamentos humanos inclusivos, seguros, resilientes e sustentáveis [8]. * Meta 11.5: Redução de mortes e perdas econômicas por catástrofes hídricas [8]. * Meta 11.6: Redução do impacto ambiental negativo per capita (qualidade do ar, gestão de resíduos) [9]. * Meta 11.7: Acesso universal a espaços públicos seguros [9]. * Meta 11.a: Relações econômicas, sociais e ambientais positivas [9]. * Meta 11.b: Cidades e assentamentos com políticas integradas para resiliência a desastres [10].
+◦
+ODS 12: Assegurar padrões de produção e de consumo sustentáveis [10]. * Meta 12.4: Manejo ambientalmente saudável de produtos químicos e resíduos [11]. * Meta 12.5: Redução substancial da geração de resíduos [11]. * Meta 12.8: Informação e conscientização para o desenvolvimento sustentável [12].
+•
+1.5 Planejamento e Capacitação para a PNSB
+◦
+Atividades de preparação: Leitura de leis e instrumentos, estudos, eventos (Webinars, Congressos, Seminários), reuniões e visitas técnicas [12-14].
+◦
+Exemplos de visitas técnicas: Aterros sanitários, equipamentos de drenagem, jardins filtrantes, cooperativas [13, 14].
+--------------------------------------------------------------------------------
+Módulo 2: Estrutura do Questionário MRS da PNSB 2024 e Caracterização do Prestador de Serviço
+•
+2.1 Blocos do Questionário de Limpeza Urbana e Manejo de Resíduos Sólidos (MRS) [14-22]
+◦
+IDM: Identificação do Município Pesquisado [14, 17].
+◦
+IDP: Identificação do Prestador de Serviço no Município Pesquisado [15, 17].
+◦
+RSP: Responsável pela Informação do Prestador de Serviço [15, 18].
+•
+2.2 CZP: Caracterização do Prestador de Serviço [15, 18, 20, 21, 23]
+◦
+Execução de serviços de limpeza urbana e manejo de resíduos sólidos (direta e/ou indiretamente) [23].
+◦
+Serviços executados DIRETAMENTE (próprio prestador, sem terceirização) [24, 25]: * Coleta convencional de resíduos sólidos domésticos [26]. * Coleta convencional de resíduos públicos [27, 28]. * Coleta seletiva [28, 29]. * Varrição de vias e logradouros públicos [30, 31]. * Capina e/ou raspagem de vias e logradouros públicos [31]. * Demais serviços de limpeza urbana (limpeza de feiras/mercados, remoção de animais mortos, poda de árvores, pintura de meio-fio/guias, limpeza de espelhos d’água e margens de cursos d’água) [32, 33]. * Coleta de resíduos sólidos especiais [34, 35]. * Coleta de resíduos sólidos sujeitos à logística reversa (vidros, lâmpadas, eletroeletrônicos) [36]. * Limpeza de estruturas de drenagem de águas pluviais (bocas de lobo, galerias, parques lineares, piscinões) [37-40]. * Limpeza de praias (litorâneas e de rios) [41]. * Processamento de resíduos sólidos secos (tratamento, triagem, reutilização, reciclagem, incineração) [42-44]. * Processamento de resíduos sólidos orgânicos (tratamento, compostagem) [45, 46]. * Disposição final (aterros sanitários, aterros inertes, lixões, aterros controlados) [47]. * Outros serviços [33, 48].
+◦
+Área de atuação (direta e indiretamente): Somente no município ou em outros municípios [49].
+◦
+Natureza jurídica do prestador de serviço: [50-54] * Administração direta do poder público [50]. * Autarquia [51]. * Empresa pública [52]. * Sociedade de economia mista [52]. * Consórcio público [52]. * Empresa privada [53]. * Fundação (pública ou privada) [53, 54]. * Associação, cooperativa e afins [54]. * Outra [55].
+◦
+Esfera administrativa do prestador de serviço: Federal, Estadual, Municipal, Privada, Interfederativa, Intermunicipal [55].
+--------------------------------------------------------------------------------
+Módulo 3: Aspectos Legais, Terceirização e Coleta Convencional
+•
+3.1 LEG: Aspectos Legais e Metas de Universalização [56, 57]
+◦
+Instrumento de delegação ou outorga da prestação do serviço: [57-59] * Contrato de programa [58]. * Contrato de concessão comum [58]. * Contrato de Parceria Público-Privada [59].
+◦
+Período de vigência do instrumento (data de início e término) [59-61].
+◦
+Metas de universalização para os serviços de limpeza urbana e manejo de resíduos sólidos [61, 62].
+◦
+Ouvidoria ou central de atendimento: Recebimento de reclamações ou manifestações [62, 63]. * Principal reclamação ou manifestação sobre o serviço: [64-67] * Implantação de coleta domiciliar regular ou outros serviços [64, 65]. * Problemas na coleta domiciliar regular ou outros serviços [65]. * Pontos de lançamento clandestino de lixo [66]. * Solicitação para limpeza de corpos hídricos ou coleta seletiva [66, 67]. * Outras ou nenhuma reclamação [67].
+◦
+Existência de entidade reguladora dos serviços: [67, 68] * Tipo de entidade reguladora (Municipal, Estadual, Consórcio público, Outra, Não sabe) [69].
+•
+3.2 SRT: Serviço(s) de Limpeza Urbana e Manejo de Resíduos Sólidos Realizado(s) por Terceiro(s) [70, 71]
+◦
+Contratação de empresa(s) para execução de serviços [71].
+◦
+Identificação e cadastro de empresas terceirizadas [72].
+◦
+Serviços executados por terceiros [73].
+•
+3.3 VCC: Varrição, Capina e Coleta de Resíduos Sólidos Domésticos e Públicos [74, 75]
+◦
+Forma de execução do serviço de varrição de vias e logradouros públicos: Mecânica ou Manual [75-77].
+◦
+Frequências e áreas de abrangência da varrição: Diária, Três/Duas vezes por semana, Outra, Não realizou nesta área, Município sem área rural [78-80].
+◦
+Forma de execução do serviço de capina e/ou raspagem de vias e logradouros públicos: Mecânica, Manual, Química ou Não realizou [80-82].
+◦
+Frequências e áreas de abrangência da capina e/ou raspagem: Diária, Três/Duas vezes por semana, Outra, Não realizou nesta área, Município sem área rural [83-85].
+◦
+Coleta convencional de resíduos sólidos: [85, 86] * Tipos: Resíduos domésticos e/ou Resíduos públicos [86, 87]. * Formas de coleta: Porta a porta, Caçambas/Pontos estacionários, Outra [87, 88]. * Frequências e áreas de abrangência da coleta convencional de resíduos domésticos: Área urbana, Área rural [89, 90].
+◦
+Pesagem dos resíduos sólidos domésticos e/ou públicos coletados: [90-93] * Registro de peso anual total, doméstico e público [92, 93].
+◦
+Estudo gravimétrico dos resíduos sólidos: Pesagem e classificação de amostras [93, 94].
+◦
+Destinação/Disposição dos resíduos sólidos domésticos e/ou públicos COLETADOS: [94, 95] * Vazadouro a céu aberto (lixão, ponto viciado) [96]. * Vazadouro em áreas alagadas ou alagáveis [97]. * Unidade de transbordo [98]. * Unidade de triagem (galpão ou usina) [99]. * Unidade de tratamento por incineração (não queima simples) [100]. * Unidade de compostagem (pátio ou usina) [101]. * Unidade de manejo de galhadas e podas [101]. * Aterro controlado [101, 102]. * Aterro sanitário [102-104].
+--------------------------------------------------------------------------------
+Módulo 4: MRS em Áreas Especiais e Coleta Seletiva
+•
+4.1 SAE: Serviço de Limpeza Urbana e Manejo de Resíduos Sólidos em Áreas Especiais [105, 106]
+◦
+Definição de "Áreas Especiais": Terra indígena, comunidades ribeirinhas, quilombos, favelas, comunidades isoladas, invasões, grotas, baixadas, vilas, ressacas, loteamentos irregulares, mocambos, palafitas, acampamentos ciganos, ocupações de agricultores sem-terra e demais áreas de difícil acesso [105, 106].
+◦
+Realização de serviços de limpeza urbana e manejo de resíduos sólidos nessas áreas [107].
+◦
+Serviço sob demanda da comunidade [107, 108].
+◦
+Formas de execução da coleta convencional dos resíduos sólidos domésticos e/ou públicos nesses locais: Veículo automotor, Embarcação, Veículo de tração animal, Veículo de tração manual, Caçambas estacionárias ou outros recipientes, Não realizou coleta [108-110].
+◦
+Incentivo à separação de resíduos domésticos (recicláveis, não recicláveis e/ou orgânicos) [110, 111].
+•
+4.2 SEL: Serviço de Coleta Seletiva [112]
+◦
+Conceito de coleta seletiva: Segregação prévia conforme origem e/ou composição [112-114].
+◦
+Origem dos resíduos: Domésticos, Comerciais, Industriais, Hospitalares, Agrícolas, Públicos [115, 116].
+◦
+Composição dos resíduos: Orgânicos, Recicláveis (papel, plástico, vidro, metal), Perigosos, Rejeitos [116-118].
+◦
+Cores para coleta seletiva (CONAMA 275/2001): Azul, Vermelho, Verde, Amarelo, Marrom, Laranja, Branco, Roxo, Preto, Cinza [118, 119].
+◦
+Benefícios da coleta seletiva: Redução de lixo em aterros, fomento ao reuso, facilitação do trabalho de reciclagem [113, 119].
+◦
+Diferença entre coleta seletiva e coleta convencional [113, 114].
+◦
+Atividades incluídas no serviço de coleta seletiva: Coleta, Recebimento, Processamento, Destinação/disposição [114, 120].
+◦
+Realização de serviço de coleta seletiva (coleta e/ou recebimento e/ou processamento e/ou destinação) [120].
+◦
+Formas de coleta (recolhimento) e área de abrangência: Coleta porta a porta, Pontos de entrega voluntária (PEVs)/Ecopontos, Outra, Por demanda [121, 122].
+◦
+Recebimento de resíduos oriundos da coleta seletiva [123].
+◦
+Processamento do material da coleta seletiva: [123, 124] * Tipos de processamento: Triagem manual, Triagem mecânica, Prensagem e enfardamento, Granulação, Extrusão (Fio) [124-127].
+◦
+Materiais coletados e/ou recebidos e/ou processados através da coleta seletiva [127].
+◦
+Finalidade dada ao(s) material(is) coletado(s) e/ou recebido(s) e/ou processado(s): Recuperação, Reutilização, Reciclagem, Remanufatura [128, 129].
+◦
+Local e destinação/disposição final do rejeito gerado do resíduo coletado e/ou recebido e/ou processado [129, 130].
+--------------------------------------------------------------------------------
+Módulo 5: Manejo de Resíduos Sólidos Especiais (ESP)
+•
+5.1 ESP: Manejo de Resíduos Sólidos Especiais [131-133]
+◦
+Atividades consideradas: Coleta, Recebimento, Processamento, Destinação/disposição final [132].
+◦
+Prestador de serviço de manejo de resíduos sólidos especiais: Coleta e/ou recebe E obrigatoriamente processa e/ou destina/dispõe [133].
+•
+5.2 Resíduos Sólidos de Serviços de Saúde (RSS) [133, 134]
+◦
+Classificação dos resíduos: Perigosos Classe I, Não Perigosos Classe II-A, Não Perigosos Classe II-B [134].
+◦
+Características de periculosidade: Inflamabilidade, Corrosividade, Reatividade, Toxicidade, Patogenicidade [135, 136].
+◦
+Coleta diferenciada e/ou recebimento [137].
+◦
+Atividades realizadas [137].
+◦
+Processamento (exceto disposição final): Incineração, Tratamento em autoclave, Tratamento por micro-ondas, Coprocessamento em forno de cimento [138-141].
+◦
+Destinação/Disposição final: Vazadouro (lixão), Valas/células específicas em aterro sanitário, Aterro específico para resíduos especiais, Outras [142, 143].
+•
+5.3 Resíduos Sólidos de Construção Civil (RCC) [143]
+◦
+Definição: Resíduos gerados em construções, reformas, reparos e demolições [143].
+◦
+Classes (Resolução CONAMA nº 307/2002): [144, 145] * Classe A: Reutilizáveis ou recicláveis como agregados [144]. * Classe B: Recicláveis para outras destinações (plásticos, papel, metais, madeiras, gesso) [144]. * Classe C: Sem tecnologias ou aplicações economicamente viáveis para reciclagem [144]. * Classe D: Resíduos perigosos (tintas, óleos, amianto) [145].
+◦
+Coleta diferenciada e/ou recebimento [145].
+◦
+Atividades realizadas [145].
+◦
+Processamento (exceto disposição final): [146-151] * Triagem simples dos RCC reaproveitáveis (classes A e B) [147]. * Triagem e trituração simples (bica corrida) dos resíduos classe A [148]. * Triagem e trituração dos resíduos classe A, com classificação granulométrica [148]. * Reaproveitamento dos agregados produzidos na fabricação de componentes construtivos [149]. * Usinas de reciclagem (Classe B) [150]. * Destinação para cogeração de energia ou matéria-prima (Classe B) [151]. * Envio para unidade de transbordo (Classe A) [151]. * Outros [152].
+◦
+Destinação/Disposição final: [152-155] * Vazadouro (lixão) [154]. * Disposição/utilização sob controle em aterro sanitário [154]. * Disposição sob controle em pátio ou galpão de estocagem específico para resíduos especiais [154]. * Disposição sob controle em aterro de inertes [155]. * Utilização definitiva e sob controle como material de aterro [155]. * Outras [155].
+•
+5.4 Embalagens de Agrotóxicos [156]
+◦
+Definição e periculosidade [156].
+◦
+Responsabilidade pela destinação na cadeia de produção e utilização [156].
+◦
+Procedimentos pós-uso (lavagem, encaminhamento a postos/centrais) [157].
+◦
+Coleta diferenciada e/ou recebimento (itinerante, postos fixos) [158].
+◦
+Atividades realizadas [159].
+◦
+Processamento (acondicionamento, estocagem) [159, 160].
+◦
+Destinação/Disposição final: [160-163] * Logística reversa [161]. * Vazadouro (lixão) [162]. * Disposição/utilização sob controle em aterro sanitário [162]. * Disposição sob controle em pátio ou galpão de estocagem específico [163]. * Disposição sob controle em aterro específico para resíduos especiais [163]. * Outras [163].
+•
+5.5 Outros Resíduos Sólidos Especiais [163, 164]
+◦
+Coleta diferenciada e/ou recebimento [163, 164].
+◦
+Tipos de resíduos e atividades realizadas: [164-171] * Resíduos industriais (Óleos, Cinzas, Metais, Borracha, Papel, Plásticos, Madeira, Vidro) [164]. * Resíduos de serviços de transportes [165]. * Resíduos de mineração [165]. * Resíduos de grandes geradores [166]. * Pneumáticos [166]. * Pilhas e baterias [167]. * Lâmpadas [167]. * Óleos lubrificantes [168]. * Eletroeletrônicos e seus componentes [169]. * Embalagens de vidro [169]. * Embalagens em geral (plásticas, metal, papel) [170]. * Outros [171].
+◦
+Processamento (exceto disposição final) [172].
+◦
+Destinação/Disposição final: [172-178] * Distribuição ordenada no solo (aterro sanitário, aterro de inertes) [174]. * Tratamento em solo (landfarming, biodegradação) [175]. * Confinamento superficial (lagoas de tratamento, bacias de decantação) [176]. * Aterramentos especialmente projetados (aterros sanitários industriais) [176]. * Tratamento biológico (compostagem, biodigestão) [177]. * Tratamento físico-químico [178]. * Tratamentos térmicos (com ou sem reaproveitamento energético) [178]. * Armazenamento permanente [179]. * Disposição em lixão, aterro controlado [179]. * Outras [179].
+--------------------------------------------------------------------------------
+Módulo 6: Unidades de Destinação/Disposição Final (DIS)
+•
+6.1 DIS: Unidade(s) de Destinação/Disposição Final dos Resíduos Sólidos [180]
+◦
+Objetivo: Caracterizar as unidades de destinação/disposição final existentes no município [180].
+◦
+Definições: [181, 182] * Destinação Final de Resíduos Sólidos (Ambientalmente Adequada e Não Adequada) [181]. * Disposição Final de Resíduos Sólidos (Adequados e Não Adequados) [182].
+◦
+Responsabilidade pela operação de unidade(s) em funcionamento [183, 184].
+•
+6.2 Vazadouro a Céu Aberto [185]
+◦
+Definição e características [185].
+◦
+Responsabilidade pela operação [185, 186].
+◦
+Número de unidades em funcionamento [186].
+◦
+Características da principal unidade: Triagem mecânica, localização (aglomerados/proteção ambiental), licença, monitoramento (águas, saúde), via de acesso, cerca, controle de acesso, edificação, impermeabilização, drenagem de chorume/gases, recobrimento, presença de catadores/moradias/animais, queima [187-191].
+◦
+Métodos de pesagem dos resíduos [191, 192].
+◦
+Peso anual total estimado [192].
+◦
+Tipos de resíduos recebidos: Perigosos, Não perigosos e não inertes (biodegradáveis), Não perigosos e inertes (não biodegradáveis) [193, 194].
+•
+6.3 Vazadouro em Áreas Alagadas ou Alagáveis [195]
+◦
+Definição e características [195].
+◦
+Responsabilidade pela operação e número de unidades [196].
+◦
+Características da principal unidade (similar ao vazadouro a céu aberto) [197-202].
+◦
+Métodos de pesagem e peso anual total estimado [202].
+◦
+Tipos de resíduos recebidos [203].
+•
+6.4 Unidade de Tratamento por Incineração [203, 204]
+◦
+Definição: Eliminação de resíduos perigosos por alta temperatura [203].
+◦
+Responsabilidade pela operação e número de unidades [204].
+◦
+Características da principal unidade: Área para acondicionamento, localização, licença, via de acesso, controle de acesso, edificação, registro de resíduos, queima, câmaras de combustão, monitoramento contínuo, controle de emissão de poluentes, tratamento de RSS/agrotóxicos, manuseio de cinzas, geração de energia, plano de contingência/emergência [205-211].
+◦
+Métodos de pesagem e peso anual total estimado [211].
+◦
+Tipos de resíduos recebidos [212].
+•
+6.5 Unidade de Compostagem (Pátio ou Usina) [212, 213]
+◦
+Definição: Processamento de resíduos orgânicos para composto [212].
+◦
+Responsabilidade pela operação e número de unidades [213].
+◦
+Características da principal unidade: Triagem mecânica, localização, licença, monitoramento (águas, saúde), via de acesso, cerca, controle de acesso, balança, edificação, impermeabilização, drenagem/tratamento/uso de biofertilizante/chorume, manejo de águas pluviais, presença de animais/queima, geração de energia, comercialização de adubo/biofertilizante [214-219].
+◦
+Métodos de pesagem e peso anual total estimado [219].
+◦
+Tipos de resíduos recebidos [220].
+•
+6.6 Aterro Controlado [220, 221]
+◦
+Definição: Estágio intermediário entre lixão e aterro sanitário com controle periódico [220].
+◦
+Responsabilidade pela operação e número de unidades [221].
+◦
+Características da principal unidade: Triagem mecânica, localização, licença, monitoramento (águas, estabilidade, saúde), via de acesso, cerca, controle de acesso, balança, edificação, impermeabilização, drenagem/tratamento/uso/recirculação de chorume, manejo de águas pluviais, drenagem/tratamento de gases, recobrimento, presença de catadores/moradias/animais, queima, recuperação/geração/comercialização de metano/biogás [222-229].
+◦
+Métodos de pesagem e peso anual total estimado [229].
+◦
+Tipos de resíduos recebidos [230].
+•
+6.7 Aterro Sanitário [230, 231]
+◦
+Definição: Disposição final adequada sob controle técnico e operacional permanente [230].
+◦
+Responsabilidade pela operação e número de unidades [231].
+◦
+Características da principal unidade (similar ao aterro controlado, com mais detalhes e ênfase no controle técnico) [232-239].
+◦
+Métodos de pesagem e peso anual total estimado [239].
+◦
+Tipos de resíduos recebidos [240].
+•
+6.8 Outra Unidade de Disposição Final [240, 241]
+◦
+Quando nenhuma das unidades anteriores se aplica [240].
+◦
+Responsabilidade pela operação e número de unidades [241, 242].
+◦
+Métodos de pesagem e peso anual total estimado [242, 243].
+◦
+Tipos de resíduos recebidos [243].
+--------------------------------------------------------------------------------
+Módulo 7: Entidades de Catadores, Veículos e Educação Ambiental
+•
+7.1 CAT: Entidade de Catadores [244, 245]
+◦
+Definição: Trabalhadores que recolhem, selecionam e vendem resíduos recicláveis [244].
+◦
+Organização: Autônoma ou em entidades (cooperativas e associações) [245, 246].
+◦
+Vínculo com o município: Parcerias ou convênios [247, 248]. * Tipos de vínculo: Contrato de prestação de serviços, Convênio, Acordo de cooperação técnica, Termo de compromisso, Termo de cessão de uso da unidade de triagem, Outro [249-252].
+◦
+Documentos de formalização: Estatuto social, Livro de matrícula, Licença ambiental, Emissão de notas fiscais, Ata registrada, Emissão de créditos de logística reversa, Outro [252-256].
+◦
+Parcerias (apoio e suporte, excluindo vínculos formais) [256, 257]. * Onde: No município pesquisado ou em outros municípios [257]. * Parceiros: Prefeitura, empresa de disposição final, empresas geradoras de resíduos, empresas de logística reversa, Outros [257, 258]. * Formas de parceria: Aluguel de galpão, Doação de maquinário, Remuneração (em dinheiro), Desconto em taxas municipais, Capacitação, Créditos de logística reversa, Outra [258-262].
+◦
+Forma de cálculo no pagamento aos catadores (principal): Valor fixo mensal, Por tonelada comercializada, Por tonelada coletada, Por quilômetro rodado, Por domicílios atendidos, Múltiplos fatores de cálculo, Outra [262-264].
+◦
+Local(is) de atuação da entidade: Em unidade de transbordo, Próximo/Dentro da unidade de disposição final, Unidade de Triagem (Galpão ou usina) [264, 265].
+•
+7.2 VEI: Informações sobre Veículos e Equipamentos [266]
+◦
+Veículo(s) e/ou equipamento(s) utilizado(s) no serviço de limpeza urbana e manejo de resíduos sólidos: [266-274] * Trator (de esteiras, com reboque, com rolo compactador, de pneus com rolo) [267, 271, 272]. * Retroescavadeira [268]. * Pá carregadeira [268]. * Caminhão (basculante, pipa, compactador, poliguindaste) [269, 270]. * Escavadeira hidráulica [271]. * Motocicleta com reboque [273]. * Embarcação [273]. * Tração (Animal, Humana) [274]. * Outros ou Não utilizou [274, 275].
+•
+7.3 EDU: Educação Ambiental [276]
+◦
+Definição: Processos que promovem conscientização sobre conservação, sustentabilidade e respeito ao meio ambiente [276].
+◦
+Importância do descarte correto dos resíduos: Evita contaminação, reduz transtornos em períodos de chuva, gera renda, prolonga vida útil de aterros, viabiliza sistemas de tratamento que geram energia, melhora qualidade de vida [277, 278].
+◦
+Realização de projeto ou ação de educação ambiental em manejo de resíduos sólidos [278].
+◦
+Formação na área ambiental e/ou realização de outros projetos/ações do responsável [279, 280].
+◦
+Tema(s) desenvolvido(s) no(s) projeto(s) ou ação(ões): [280-289] * Coleta seletiva [281]. * Coleta de óleo comestível usado [281]. * Impactos da disposição inadequada de resíduos especiais (pilhas, baterias, lâmpadas, pneus, eletrônicos) [282]. * Restos verdes e importância da compostagem [283]. * Entulho de construção civil – destinação adequada e usos [283, 284]. * Ciclo de vida dos materiais [285]. * Sistemas de reciclagem [285]. * Impactos ambientais decorrentes da disposição inadequada de resíduos sólidos (poluição, proliferação de vetores, alagamentos, diminuição de vida útil de aterro) [285, 286]. * Relação entre saúde pública, manejo de resíduos sólidos e qualidade dos recursos hídricos [286-288]. * 3R's - reduzir, reutilizar e reciclar [288, 289]. * Outros [289].
+◦
+Como eram realizados os projetos ou ações: [289-292] * Campanhas de sensibilização/mobilização social [290]. * Capacitação de profissionais (educação, saúde, comunitários) [290]. * Capacitação para empresas, cooperativas de reciclagem [290]. * Inserção do tema no programa de educação ambiental nas escolas [290]. * Mutirões de limpeza [291]. * Promoção de palestras temáticas; oficinas e/ou seminários [291]. * Rodas de conversa [291]. * Veiculação em internet, redes sociais, rádio, tv, jornal, folhetos e cartazes [291]. * Utilização de grupos artísticos orientados [291]. * Visitas de agentes públicos a residências, empresas, órgãos públicos [292]. * Visitas guiadas a unidades de destinação/disposição final de resíduos sólidos [292]. * Outros [292].
+•
+7.4 OBS: Observação [15] (Seção para notas ou informações adicionais não categorizadas em outros blocos).

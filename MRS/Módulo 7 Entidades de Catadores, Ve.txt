@@ -1,0 +1,42 @@
+Módulo 7: Entidades de Catadores, Veículos e Educação Ambiental [1]
+
+
+
+Resumo
+O Módulo 7 aborda três pilares essenciais na gestão de resíduos: Entidades de Catadores, Informações sobre Veículos e Equipamentos, e Educação Ambiental. A seção sobre Catadores detalha sua organização, vínculos com municípios, formas de formalização, parcerias e métodos de pagamento, destacando seu papel fundamental na reciclagem. A parte de Veículos e Equipamentos lista os diversos maquinários utilizados nos serviços de limpeza urbana, desde tratores a embarcações, sublinhando a infraestrutura necessária. Por fim, a seção de Educação Ambiental define sua importância, os temas abordados e as metodologias empregadas para conscientizar a população sobre o descarte correto e a sustentabilidade.
+
+
+•
+7.1 CAT: Entidade de Catadores [2, 3]
+◦
+Definição: Trabalhadores que recolhem, selecionam e vendem resíduos recicláveis [2].
+◦
+Organização: Autônoma ou em entidades (cooperativas e associações) [3, 4].
+◦
+Vínculo com o município: Parcerias ou convênios [5, 6]. * Tipos de vínculo: Contrato de prestação de serviços [7], Convênio [8], Acordo de cooperação técnica [9], Termo de compromisso [9], Termo de cessão de uso da unidade de triagem [10], Outro [10].
+◦
+Documentos de formalização: Estatuto social [10], Livro de matrícula [11], Licença ambiental [12], Emissão de notas fiscais [13], Ata registrada [13], Emissão de créditos de logística reversa [14], Outro [14].
+◦
+Parcerias (apoio e suporte, excluindo vínculos formais) [14, 15]. * Onde: No município pesquisado ou em outros municípios [15]. * Parceiros: Prefeitura [15], empresa de disposição final [16], empresas geradoras de resíduos [16], empresas de logística reversa [16], Outros [16]. * Formas de parceria: Aluguel de galpão [16], Doação de maquinário [17], Remuneração (em dinheiro) [18], Desconto em taxas municipais [18], Capacitação [19], Créditos de logística reversa [20], Outra [20].
+◦
+Forma de cálculo no pagamento aos catadores (principal): Valor fixo mensal [20], Por tonelada comercializada [21], Por tonelada coletada [21], Por quilômetro rodado [21], Por domicílios atendidos [22], Múltiplos fatores de cálculo [22], Outra [22].
+◦
+Local(is) de atuação da entidade: Em unidade de transbordo [22], Próximo/Dentro da unidade de disposição final [23], Unidade de Triagem (Galpão ou usina) [23].
+•
+7.2 VEI: Informações sobre Veículos e Equipamentos [24]
+◦
+Veículo(s) e/ou equipamento(s) utilizado(s) no serviço de limpeza urbana e manejo de resíduos sólidos: [24-32] * Trator (de esteiras [25], com reboque [25], com rolo compactador [29], de pneus com rolo [30]) [25, 29, 30]. * Retroescavadeira [26]. * Pá carregadeira [26]. * Caminhão (basculante [27], pipa [27], compactador [28], poliguindaste [28]). * Escavadeira hidráulica [29]. * Motocicleta com reboque [31]. * Embarcação [31]. * Tração (Animal [32], Humana [32]). * Outros ou Não utilizou [32, 33].
+•
+7.3 EDU: Educação Ambiental [34]
+◦
+Definição: Processos que promovem conscientização sobre conservação, sustentabilidade e respeito ao meio ambiente [34].
+◦
+Importância do descarte correto dos resíduos: Evita contaminação, reduz transtornos em períodos de chuva, gera renda, prolonga vida útil de aterros, viabiliza sistemas de tratamento que geram energia, melhora qualidade de vida [35, 36].
+◦
+Realização de projeto ou ação de educação ambiental em manejo de resíduos sólidos [36].
+◦
+Formação na área ambiental e/ou realização de outros projetos/ações do responsável [37, 38].
+◦
+Tema(s) desenvolvido(s) no(s) projeto(s) ou ação(ões): [38-47] * Coleta seletiva [39]. * Coleta de óleo comestível usado [39]. * Impactos da disposição inadequada de resíduos especiais (pilhas, baterias, lâmpadas, pneus, eletrônicos) [40]. * Restos verdes e importância da compostagem [41]. * Entulho de construção civil – destinação adequada e usos [41, 42]. * Ciclo de vida dos materiais [43]. * Sistemas de reciclagem [43]. * Impactos ambientais decorrentes da disposição inadequada de resíduos sólidos (poluição, proliferação de vetores, alagamentos, diminuição de vida útil de aterro) [43, 44]. * Relação entre saúde pública, manejo de resíduos sólidos e qualidade dos recursos hídricos [44-46]. * 3R's - reduzir, reutilizar e reciclar [46, 47]. * Outros [47].
+◦
+Como eram realizados os projetos ou ações: [47-50] * Campanhas de sensibilização/mobilização social [48]. * Capacitação de profissionais (educação, saúde, comunitários) [48]. * Capacitação para empresas, cooperativas de reciclagem [48]. * Inserção do tema no programa de educação ambiental nas escolas [48]. * Mutirões de limpeza [49]. * Promoção de palestras temáticas; oficinas e/ou seminários [49]. * Rodas de conversa [49]. * Veiculação em internet, redes sociais, rádio, tv, jornal, folhetos e cartazes [49]. * Utilização de grupos artísticos orientados [49]. * Visitas de agentes públicos a residências, empresas, órgãos públicos [50]. * Visitas guiadas a unidades de destinação/disposição final de resíduos sólidos [50]. * Outros [50].

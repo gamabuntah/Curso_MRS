@@ -1,0 +1,6 @@
+[
+  "public/**/*.css",
+  "public/**/*.js",
+  "public/**/*.html",
+  "public/MRS/Audios/*.wav"
+]

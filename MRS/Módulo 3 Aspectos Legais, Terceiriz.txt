@@ -1,0 +1,89 @@
+Módulo 3: Aspectos Legais, Terceirização e Coleta Convencional
+
+
+Resumo
+Este material didático, parte do curso "Saneamento Básico e a Pesquisa Nacional de Saneamento Básico (PNSB)", detalha o Módulo 3: Aspectos Legais, Terceirização e Coleta Convencional. Ele explora as estruturas legais que regulamentam os serviços de saneamento, incluindo os diferentes tipos de contratos para a delegação de serviços e a importância de metas de universalização e ouvidorias para a participação cidadã. Além disso, aborda a atuação de empresas terceirizadas na limpeza urbana e no manejo de resíduos, e descreve os métodos de varrição, capina e coleta de resíduos domésticos e públicos, enfatizando a destinação final ambientalmente adequada versus práticas inadequadas como os "lixões".
+
+
+Este módulo aborda os instrumentos legais que regem a prestação de serviços de saneamento, a atuação de terceiros na limpeza urbana e manejo de resíduos sólidos, e detalha os processos de varrição, capina e coleta de resíduos domésticos e públicos, incluindo seus métodos e destinação final [1-3].
+3.1 LEG: Aspectos Legais e Metas de Universalização
+O bloco de Aspectos Legais e Metas de Universalização (LEG) explora a formalização da prestação dos serviços de saneamento básico [1, 2].
+•
+Instrumento de delegação ou outorga da prestação do serviço: O questionário busca identificar o instrumento legal pelo qual o município define o prestador de serviço de manejo de resíduos sólidos [1, 4, 5]. As opções incluem:
+◦
+Contrato de programa: Contrato de delegação de um serviço público que não exige licitação, restrito a casos em que o prestador de caráter público foi contratado no âmbito de cooperação federativa (Lei nº 11.107/2005) [1, 6, 7].
+◦
+Contrato de concessão comum: Contrato que transfere a gestão e execução de um serviço do Poder Público ao particular, por sua conta e risco, precedido de licitação conforme a Lei nº 8.987/1995 [1, 6, 7].
+◦
+Contrato de Parceria Público-Privada (PPP): Um parceiro privado se compromete a disponibilizar à administração pública ou à comunidade uma utilidade mediante a operação e manutenção de uma obra/serviço por ele projetada, financiada e construída, com remuneração periódica paga pelo Estado e vinculada ao seu desempenho [1, 8, 9].
+◦
+Outras opções incluem Lei, Outro ou Inexistente [9]. A transferência da execução de um serviço público pode ocorrer por outorga (via lei) ou delegação (via lei, contrato ou ato administrativo) [9].
+•
+Período de vigência do instrumento: O questionário verifica se o instrumento de delegação ou outorga definia um período de vigência, ou seja, o tempo previsto para o início e o fim da validade do documento [1, 8, 10, 11].
+•
+Metas de universalização para os serviços de limpeza urbana e manejo de resíduos sólidos: É questionado se o instrumento de delegação ou outorga definia metas de universalização. A universalização, segundo a Lei nº 11.445/2007, Art. 3º, inciso III, corresponde à ampliação progressiva do acesso ao saneamento básico a todos os domicílios ocupados [1, 12-14]. As metas de universalização são as estratégias e etapas para alcançar essa ampliação [15].
+•
+Ouvidoria ou central de atendimento para recebimento de reclamações ou manifestações: O questionário indaga se o prestador de serviço possuía uma ouvidoria ou central de atendimento em 2024. A ouvidoria atua na defesa dos direitos dos cidadãos e usuários, recebendo reivindicações, denúncias, sugestões e elogios [13, 15-17]. A central de atendimento faz a interação direta entre cliente e empresa [18].
+◦
+Principal reclamação ou manifestação sobre o serviço: Se houver ouvidoria ou central, o questionário pergunta qual foi a principal reclamação ou manifestação recebida, podendo ser sobre implantação ou problemas na coleta domiciliar regular ou outros serviços, pontos de lançamento clandestino de lixo, ou solicitação para limpeza de corpos hídricos ou coleta seletiva [16, 18-24].
+•
+Existência de entidade reguladora dos serviços: A PNSB 2024 verifica a existência de uma entidade reguladora para os serviços de limpeza urbana e manejo de resíduos sólidos. As entidades reguladoras estabelecem padrões, normas e tarifas, garantem o cumprimento de metas e previnem abusos de poder econômico [16, 22, 24, 25].
+◦
+Tipo de entidade reguladora: Pode ser municipal, estadual, consórcio público, ou outro [16, 26, 27].
+3.2 SRT: Serviço(s) de Limpeza Urbana e Manejo de Resíduos Sólidos Realizado(s) por Terceiro(s)
+Este bloco se concentra nos serviços de limpeza urbana e manejo de resíduos sólidos executados por empresas terceirizadas [3, 28, 29].
+•
+Contratação de empresa(s) para execução de serviços: O questionário verifica se o prestador de serviço contratou empresas para a execução de serviços em 2024 [28-30].
+•
+Serviços executados por terceiros: Se houver contratação, são listados os serviços específicos que foram executados por terceiros [28, 29, 31]. O informante deve indicar apenas os serviços prestados pela empresa terceirizada [32].
+•
+Identificação e cadastro de empresas terceirizadas: O manual orienta a verificar se a empresa terceirizada foi cadastrada, sendo este um detalhe importante para a qualidade dos dados [28, 33, 34].
+3.3 VCC: Varrição, Capina e Coleta de Resíduos Sólidos Domésticos e Públicos
+O bloco VCC detalha as formas de execução e a abrangência dos serviços de varrição, capina e coleta de resíduos sólidos [3, 28, 34].
+•
+Forma de execução do serviço de varrição de vias e logradouros públicos: As formas de execução podem ser:
+◦
+Mecânica: Utiliza equipamentos motomecanizados como varredeiras ou roçadeiras acopladas a tratores, complementadas por dispositivos de sucção a vácuo, incluindo aspiradores e trituradores [28, 34-36].
+◦
+Manual: Realizada com vassouras, rodos e pás pelos varredores nas superfícies dos passeios, sarjetas e canteiros, incluindo o esvaziamento de cestos de lixo [28, 36, 37].
+•
+Frequências e áreas de abrangência da varrição: O questionário busca a periodicidade (diária, três/duas vezes por semana, outra) e as áreas cobertas pelo serviço (área urbana, área rural) [38-40].
+•
+Forma de execução do serviço de capina e/ou raspagem de vias e logradouros públicos: As opções para capina e/ou raspagem são:
+◦
+Mecânica: Uso de roçadeiras acopladas a tratores ou portáteis para remoção de ervas daninhas e plantas indesejáveis [38, 41-43].
+◦
+Manual: Utilização de ferramentas manuais como enxada, facão, foice e rastelo [38, 43, 44].
+◦
+Química: Uso de herbicidas para controle de vegetação [38, 43, 45].
+◦
+Não realizou [46].
+•
+Frequências e áreas de abrangência da capina e/ou raspagem: Similar à varrição, o questionário investiga a periodicidade e as áreas de abrangência [38, 46, 47].
+•
+Coleta convencional de resíduos sólidos: Refere-se à coleta de resíduos domésticos e/ou de vias e logradouros públicos [38, 48-50].
+◦
+Tipos: Inclui resíduos domésticos, gerados nas residências (orgânicos como restos de alimentos, madeira, ou inorgânicos como embalagens, vidros, papéis) [38, 49-51], e resíduos públicos, originados em espaços públicos (papéis, plásticos, latas, etc.) [38, 52, 53].
+◦
+Formas de coleta: Podem ser porta a porta (coleta em domicílios, prédios) [38, 52, 53], via caçambas/pontos estacionários (recipientes metálicos para coletar e transportar diversos materiais) [38, 53, 54], ou outra [53].
+◦
+Frequências e áreas de abrangência da coleta convencional de resíduos domésticos: Pergunta-se sobre a periodicidade e se a coleta abrange áreas urbanas e/ou rurais [38, 55, 56].
+•
+Pesagem dos resíduos sólidos domésticos e/ou públicos coletados: O questionário verifica se os resíduos foram pesados [57-59].
+◦
+Método utilizado: Podem ser balança, caçambas, recipientes coletados (sacos), ou outro [60].
+◦
+Peso anual total estimado: Deve ser informado em toneladas, com orientações específicas para arredondamento e preenchimento de valores nulos ou ignorados [57, 60-65].
+•
+Estudo gravimétrico dos resíduos sólidos: É perguntado se o prestador realizou estudo gravimétrico, que consiste na pesagem e classificação de amostras dos resíduos coletados [57, 62, 65].
+•
+Destinação/Disposição dos resíduos sólidos domésticos e/ou públicos COLETADOS: Refere-se ao processo de encaminhamento dos resíduos para alternativas que visam reduzir o impacto ambiental ou ao local e método de armazenamento definitivo dos resíduos que não podem ser reaproveitados [57, 65-67].
+◦
+A destinação final ambientalmente adequada inclui reutilização, reciclagem, compostagem, incineração, transbordo, e aterros sanitários ou inertes [67].
+◦
+A disposição final adequada se refere a aterros sanitários (seguem normas ambientais) e aterros inertes (para resíduos não perigosos e volumosos) [54, 68].
+◦
+As práticas inadequadas incluem vazadouros a céu aberto (lixões) e aterros controlados, que carecem de controle ambiental suficiente e podem causar poluição do solo, água e ar [7, 18, 54, 68, 69].
+◦
+Outros tipos de unidades de destinação/disposição incluem: unidade de transbordo (armazenamento temporário para posterior transferência) [11, 67], unidade de triagem (para tratar, separar e reaproveitar resíduos) [14, 67], unidade de tratamento por incineração (queima controlada para geração de energia ou redução de volume) [15, 67], e unidade de compostagem (para processar resíduos orgânicos em adubo) [18, 67]. A pesquisa questiona se a destinação ocorreu no município pesquisado ou em outro [69].
+

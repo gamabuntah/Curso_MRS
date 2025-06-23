@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Curso MRS</title>
+    <link rel="stylesheet" href="login.css?v=1.0">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="logo">Curso MRS</div>
+            <h2>Acesse seu Progresso</h2>
+            <p>Use seu nome de usuário para acessar o curso. Se for seu primeiro acesso, crie um novo usuário.</p>
+            <div id="error-message" class="error-message"></div>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="username">Nome de Usuário</label>
+                    <input type="text" id="username" name="username" required placeholder="Ex: maria.silva">
+                </div>
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" required placeholder="••••••••">
+                </div>
+                <div class="button-group">
+                    <button type="button" id="login-btn" class="btn btn-primary">Entrar</button>
+                    <button type="button" id="register-btn" class="btn btn-secondary">Criar Novo Usuário</button>
+                </div>
+            </form>
+            <style>
+            .spinner {
+              display: inline-block;
+              width: 18px;
+              height: 18px;
+              border: 3px solid #ccc;
+              border-top: 3px solid #2b2d3a;
+              border-radius: 50%;
+              animation: spin 1s linear infinite;
+              vertical-align: middle;
+              margin-right: 8px;
+            }
+            @keyframes spin {
+              0% { transform: rotate(0deg); }
+              100% { transform: rotate(360deg); }
+            }
+            </style>
+        </div>
+    </div>
+    <script src="login.js?v=1.0"></script>
+</body>
+</html> 

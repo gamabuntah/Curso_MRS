@@ -1,0 +1,125 @@
+Módulo 5: Manejo de Resíduos Sólidos Especiais (ESP)
+
+
+Resumo
+O Módulo 5, "Manejo de Resíduos Sólidos Especiais", detalha o tratamento diferenciado para resíduos que exigem cuidados específicos devido à sua periculosidade ou volume. Ele descreve as etapas de coleta, recebimento, processamento e destinação final para diversas categorias. O texto aborda os Resíduos Sólidos de Serviços de Saúde (RSS), que são perigosos e requerem processamentos como incineração ou autoclave, e os Resíduos Sólidos de Construção Civil (RCC), que podem ser reciclados ou reutilizados. Além disso, discute as embalagens de agrotóxicos, que seguem um sistema de logística reversa devido à sua alta toxicidade, e outros resíduos especiais como pneus, pilhas e eletrônicos, enfatizando a importância de sua gestão ambientalmente adequada para evitar contaminação.
+
+
+Este módulo aprofunda o estudo do Manejo de Resíduos Sólidos (MRS) ao abordar os resíduos sólidos especiais, que exigem cuidados e processos diferenciados devido às suas características de periculosidade ou volume. Serão detalhadas as atividades de coleta, recebimento, processamento e destinação final para diversas categorias de resíduos especiais.
+5.1 ESP: Manejo de Resíduos Sólidos Especiais
+Este bloco introduz o conceito de manejo de resíduos sólidos especiais e as atividades que o compõem.
+•
+Atividades consideradas: O manejo de resíduos sólidos especiais abrange as atividades de coleta, recebimento, processamento e destinação/disposição final [1].
+•
+Prestador de serviço de manejo de resíduos sólidos especiais: Para ser considerado um prestador desse serviço, a entidade deve coletar e/ou receber esses resíduos e obrigatoriamente processar e/ou destiná-los/dispô-los [2-4]. Isso inclui resíduos de saúde, construção civil, embalagens de agrotóxicos, mineração, eletroeletrônicos, pneumáticos, vidros, pilhas, entre outros [2, 4].
+5.2 Resíduos Sólidos de Serviços de Saúde (RSS)
+Este bloco se concentra nos resíduos gerados por serviços de saúde, que são classificados como perigosos devido às suas características específicas.
+•
+Classificação dos resíduos: Embora o manual mencione RSS como "infectantes – classe 1", os resíduos perigosos de forma geral são classificados com base em suas características de periculosidade [2, 3, 5, 6].
+•
+Características de periculosidade: Incluem inflamabilidade, corrosividade, reatividade, toxicidade e patogenicidade [3, 4, 6-16].
+◦
+Inflamabilidade: Exemplos incluem catalisadores gastos, solventes como acetona e metanol [6, 7].
+◦
+Corrosividade: Inclui borras e resíduos ácidos, acumuladores elétricos à base de chumbo [6, 7].
+◦
+Reatividade: Resíduos como lodo industrial de galvanoplastia ou carvão usado em tratamento de efluentes líquidos que contêm explosivos [3, 8].
+◦
+Toxicidade: Abrange solventes halogenados, lodo de tinta, fibras de amianto, lâmpadas com vapor de mercúrio e óleos lubrificantes [3, 8].
+◦
+Patogenicidade: Resíduos que contêm microrganismos patogênicos, proteínas virais, ou organismos geneticamente modificados causadores de doenças em humanos, animais ou vegetais [3, 4, 8].
+•
+Coleta diferenciada e/ou recebimento: A pesquisa verifica se o prestador realizou coleta diferenciada (em veículo próprio ou em viagem determinada para esse tipo de resíduo) e/ou recebeu RSS em 2024 [4, 17, 18].
+•
+Atividades realizadas: As atividades podem incluir coleta em veículo exclusivo para RSS, coleta em veículo de lixo comum em viagem específica, ou recebimento de RSS de outros municípios [17-19].
+•
+Processamento (exceto disposição final): O questionário indaga se o prestador realizou processamento de RSS. O processamento refere-se a modalidades específicas de tratamento diferentes da disposição final [19, 20].
+◦
+Tipos de processamento: Podem ser incineração (queima controlada em altas temperaturas) [20-22], tratamento em autoclave (submissão a vapor saturado sob alta pressão e temperatura para desinfecção) [20, 21, 23], tratamento por micro-ondas (exposição a ondas eletromagnéticas de alta frequência) [23, 24], coprocessamento em forno de cimento (destruição térmica com substituição parcial de matéria-prima) [23-25], ou outros [24, 25].
+•
+Destinação/Disposição final: Verifica-se se o prestador realizou a disposição final de RSS [24, 25].
+◦
+Formas de destinação: Incluem disposição em vazadouro (lixão) junto com demais resíduos, disposição em valas ou células específicas em aterro sanitário, disposição sob controle em aterro específico para resíduos especiais, ou outras formas [25-27].
+5.3 Resíduos Sólidos de Construção Civil (RCC)
+Este bloco aborda o manejo dos resíduos gerados na construção civil, conhecidos como entulho de obras.
+•
+Definição: RCC são resíduos gerados em construções, reformas, reparos e demolições, incluindo os de preparação e escavação de terrenos. Exemplos são tijolos, concreto, solos, rochas, azulejos, metais, madeiras, gesso, telhas, vidros, plásticos, entre outros [27-31]. Muitos podem ser reciclados para produção de agregados [29, 30].
+•
+Classes (Resolução CONAMA nº 307/2002):
+◦
+Classe A: Resíduos reutilizáveis ou recicláveis como agregados (ex: cimento, argamassas, cerâmicos) [29, 32].
+◦
+Classe B: Resíduos recicláveis para outras destinações (ex: plásticos, papel, metais, madeiras, gesso) [29, 32].
+◦
+Classe C: Resíduos sem tecnologias ou aplicações economicamente viáveis para reciclagem [29].
+◦
+Classe D: Resíduos perigosos (ex: tintas, óleos, amianto) [6].
+•
+Coleta diferenciada e/ou recebimento: A pesquisa verifica se houve coleta diferenciada (em veículo próprio ou em viagem específica) e/ou recebimento de RCC [6, 30, 33].
+•
+Atividades realizadas: Incluem coleta em veículo exclusivo para RCC, coleta em veículo de lixo comum em viagem específica, recolhimento periódico em locais fixos de entrega voluntária (pequenos volumes), ou recebimento de RCC de outros municípios [3, 6, 33, 34].
+•
+Processamento (exceto disposição final): O questionário pergunta se o prestador realizou processamento de RCC (triagem, reaproveitamento, transbordo) [3, 34].
+◦
+Tipos de processamento: Podem ser triagem simples de RCC reaproveitáveis (classes A e B) [4, 32, 35], triagem e trituração simples (bica corrida) de resíduos classe A [18, 35], triagem e trituração com classificação granulométrica de resíduos classe A [18, 36], reaproveitamento de agregados na fabricação de componentes construtivos [19, 36, 37], usinas de reciclagem (Classe B) [21, 37], destinação para cogeração de energia ou matéria-prima (Classe B) [23, 38], envio para unidade de transbordo (Classe A) [23, 25, 38, 39], ou outros [25, 39].
+•
+Destinação/Disposição final: A pesquisa verifica a forma de destinação/disposição final dos RCC [25, 39].
+◦
+Formas de destinação: Incluem disposição em vazadouro (lixão) junto com demais resíduos, disposição/utilização sob controle em aterro sanitário (utilização como camada de cobertura) [30, 40], disposição sob controle em pátio ou galpão de estocagem específico para resíduos especiais [30, 40, 41], disposição sob controle em aterro de inertes [33, 41], utilização definitiva e sob controle como material de aterro após triagem [33, 41, 42], ou outras [33, 42].
+5.4 Embalagens de Agrotóxicos
+Este bloco trata do manejo das embalagens de agrotóxicos, resíduos de alta periculosidade.
+•
+Definição e periculosidade: São invólucros de produtos químicos fortes (agrotóxicos) que, devido à sua toxicidade, exigem procedimentos específicos após o uso para não contaminar o meio ambiente e a saúde humana [34, 42, 43].
+•
+Responsabilidade pela destinação: É compartilhada por toda a cadeia de produção e utilização, incluindo fabricantes, lojas, revendedores e produtores rurais. O Brasil conta com um programa de logística reversa chamado Sistema Campo Limpo, promovido pelo InpEV [32, 34, 43, 44].
+•
+Procedimentos pós-uso: As embalagens devem ser lavadas pelo consumidor e encaminhadas a postos/centrais de recebimento em até um ano após a compra [32, 43].
+•
+Coleta diferenciada e/ou recebimento: A coleta pode ser itinerante (feita por cooperativas/entidades ambientais) ou por entrega voluntária em postos fixos, sendo ambas enviadas para centrais [35, 45, 46].
+•
+Atividades realizadas: Incluem coleta em veículo exclusivo para agrotóxicos, coleta em veículo de lixo comum em viagem específica ou em conjunto com demais resíduos, recolhimento periódico em locais fixos de entrega voluntária, ou recebimento de embalagens de agrotóxicos de outros municípios [36, 46, 47].
+•
+Processamento (exceto disposição final): O questionário pergunta se o prestador realizou processamento (acondicionamento, estocagem) [36, 47].
+◦
+Tipos de processamento: Podem ser acondicionamento em recipientes estanques para encaminhamento à indústria, estocagem simples a granel, ou outros [37, 47, 48].
+•
+Destinação/Disposição final: Verifica-se a forma de destinação/disposição final [37, 48].
+◦
+Formas de destinação: Incluem logística reversa (forma ambientalmente adequada e autorizada) [38, 49, 50], disposição em vazadouro (lixão) em conjunto com os demais resíduos [39, 50], disposição/utilização sob controle em aterro sanitário [39, 50], disposição sob controle em pátio ou galpão de estocagem específico para resíduos especiais (observando que este não deve ser o destino final) [40, 50, 51], disposição sob controle em aterro específico para resíduos especiais [40, 51], ou outras [40, 51].
+5.5 Outros Resíduos Sólidos Especiais
+Este bloco abrange outros tipos de resíduos especiais que não se enquadram nas categorias anteriores, mas que também demandam manejo específico.
+•
+Coleta diferenciada e/ou recebimento: A pesquisa verifica se o prestador realizou coleta diferenciada ou recebeu outros tipos de resíduos especiais (industriais, pneumáticos, pilhas, lâmpadas, óleos lubrificantes, eletrônicos, embalagens em geral) [40, 41, 51, 52].
+•
+Tipos de resíduos e atividades realizadas:
+◦
+Resíduos industriais: Materiais descartados de processos industriais, que podem ser óleos, cinzas, metais, plásticos, madeira, vidro, etc. [41, 52, 53].
+◦
+Resíduos de serviços de transportes: Materiais descartados de aeroportos, terminais rodoviários, ferroviários, podendo ser perigosos (baterias) ou não perigosos (papel, plástico) [42, 53].
+◦
+Resíduos de mineração: Materiais não aproveitados na extração de minerais (partículas finas de rocha, substâncias químicas) [42, 53, 54].
+◦
+Resíduos de grandes geradores: Produzidos por pessoas físicas ou jurídicas que superam um volume determinado (comércios, condomínios) [43, 54].
+◦
+Pneumáticos: Pneus inservíveis, câmaras de ar, retalhos de pneus; considerados resíduos de classe II, exigem descarte adequado para evitar impactos ambientais [43, 54, 55].
+◦
+Pilhas e baterias: Resíduos perigosos com metais pesados tóxicos, que devem ser descartados em locais específicos [44, 55].
+◦
+Lâmpadas: Resíduos perigosos que contêm substâncias tóxicas como mercúrio e chumbo, exigindo descarte correto [44, 55, 56].
+◦
+Óleos lubrificantes: Resíduos tóxicos que exigem gerenciamento adequado, com pontos de coleta e logística reversa para recuperação do óleo básico [45, 56, 57].
+◦
+Eletroeletrônicos e seus componentes: Resíduos compostos por metais, vidro e plástico (chumbo, mercúrio), que podem ser prejudiciais à saúde e ao meio ambiente, devendo ser descartados por logística reversa [46, 57, 58].
+◦
+Embalagens de vidro: Podem ser recicladas, gerando economia de energia e matéria-prima e reduzindo a ocupação de aterros [46, 58].
+◦
+Embalagens em geral (plásticas, metal, papel): Resíduos inorgânicos que, se descartados inadequadamente, podem contaminar solo e água [47, 58, 59].
+◦
+Outros: Outros resíduos não listados [48, 59, 60].
+•
+Processamento (exceto disposição final): O questionário verifica se o prestador realizou processamento desses outros resíduos especiais [49, 59-61].
+•
+Destinação/Disposição final: A pesquisa investiga o destino final desses resíduos especiais [49, 60].
+◦
+Formas de destinação: Incluem distribuição ordenada no solo (aterro sanitário, aterro de inertes) [51, 62], tratamento em solo (landfarming, biodegradação) [52, 62, 63], confinamento superficial (lagoas de tratamento, bacias de decantação) [53, 63, 64], aterramentos especialmente projetados (aterros sanitários industriais) [53, 64], tratamento biológico (compostagem, biodigestão) [54, 64, 65], tratamento físico-químico [55, 65], tratamentos térmicos (com ou sem reaproveitamento energético) [55, 65], armazenamento permanente [56, 66], disposição em lixão ou aterro controlado [56, 66], ou outras [56, 66].
+--------------------------------------------------------------------------------

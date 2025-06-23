@@ -1,0 +1,10 @@
+{
+  "totalModulos": 7,
+  "questoesPorModulo": 15,
+  "avaliacaoFinal": 50,
+  "porcentagemMinima": 70,
+  "desbloqueioSequencial": true,
+  "validarModulosAnteriores": true,
+  "permitirRevisao": true,
+  "salvarProgresso": true
+}

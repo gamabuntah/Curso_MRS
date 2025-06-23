@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste Navegação</title>
+  <style>
+    .module-navigation {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .module-btn {
+      background: #f0f0f0;
+      color: #666;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      padding: 12px 20px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .module-btn:hover {
+      background: #e0e0e0;
+      border-color: #ccc;
+    }
+    .module-btn.active {
+      background: #6C63FF;
+      color: #fff;
+      border-color: #6C63FF;
+    }
+    .content {
+      padding: 20px;
+      border: 1px solid #ccc;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="module-navigation">
+    <button onclick="changeModule(1)" class="module-btn active">Módulo 1</button>
+    <button onclick="changeModule(2)" class="module-btn">Módulo 2</button>
+    <button onclick="changeModule(3)" class="module-btn">Módulo 3</button>
+    <button onclick="changeModule(4)" class="module-btn">Módulo 4</button>
+  </div>
+  
+  <div id="content" class="content">
+    Conteúdo do Módulo 1
+  </div>
+
+  <script>
+    let currentModule = 1;
+    
+    function changeModule(moduleNumber) {
+      console.log('Mudando para módulo:', moduleNumber);
+      currentModule = moduleNumber;
+      
+      // Atualizar conteúdo
+      const content = document.getElementById('content');
+      content.innerHTML = `Conteúdo do Módulo ${moduleNumber}`;
+      
+      // Atualizar botões ativos
+      const buttons = document.querySelectorAll('.module-btn');
+      buttons.forEach((btn, index) => {
+        if (index + 1 === moduleNumber) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+    }
+  </script>
+</body>
+</html> 

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste do Sistema de Progresso - MRS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .test-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .success { background: rgba(76, 175, 80, 0.3); }
+        .error { background: rgba(244, 67, 54, 0.3); }
+        .info { background: rgba(33, 150, 243, 0.3); }
+        pre {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🧪 Teste do Sistema de Progresso MRS</h1>
+        
+        <div class="test-section">
+            <h3>1. Teste de Conexão com Backend</h3>
+            <button onclick="testBackendConnection()">Testar Conexão</button>
+            <div id="backend-status"></div>
+        </div>
+
+        <div class="test-section">
+            <h3>2. Teste de Inicialização do ProgressManager</h3>
+            <button onclick="testProgressManager()">Inicializar ProgressManager</button>
+            <div id="progress-manager-status"></div>
+        </div>
+
+        <div class="test-section">
+            <h3>3. Teste de Operações de Progresso</h3>
+            <button onclick="testModuleCompletion()">Completar Módulo 1</button>
+            <button onclick="testAudioCompletion()">Marcar Áudio como Concluído</button>
+            <button onclick="testFinalEvaluation()">Testar Avaliação Final</button>
+            <div id="operations-status"></div>
+        </div>
+
+        <div class="test-section">
+            <h3>4. Estado Atual do Progresso</h3>
+            <button onclick="showCurrentProgress()">Mostrar Progresso Atual</button>
+            <div id="current-progress"></div>
+        </div>
+
+        <div class="test-section">
+            <h3>5. Teste de Reset</h3>
+            <button onclick="resetProgress()">Resetar Progresso</button>
+            <div id="reset-status"></div>
+        </div>
+    </div>
+
+    <script src="progress-manager.js"></script>
+    <script>
+        let progressManager = null;
+        const testUser = 'teste_progresso';
+
+        async function testBackendConnection() {
+            const statusDiv = document.getElementById('backend-status');
+            try {
+                const response = await fetch('http://localhost:3000/api');
+                if (response.ok) {
+                    const data = await response.text();
+                    statusDiv.innerHTML = `<div class="status success">✅ Backend conectado: ${data}</div>`;
+                } else {
+                    statusDiv.innerHTML = `<div class="status error">❌ Erro na conexão: ${response.status}</div>`;
+                }
+            } catch (error) {
+                statusDiv.innerHTML = `<div class="status error">❌ Erro de conexão: ${error.message}</div>`;
+            }
+        }
+
+        async function testProgressManager() {
+            const statusDiv = document.getElementById('progress-manager-status');
+            try {
+                progressManager = await new ProgressManager(testUser).init();
+                statusDiv.innerHTML = `<div class="status success">✅ ProgressManager inicializado com sucesso para usuário: ${testUser}</div>`;
+            } catch (error) {
+                statusDiv.innerHTML = `<div class="status error">❌ Erro ao inicializar ProgressManager: ${error.message}</div>`;
+            }
+        }
+
+        async function testModuleCompletion() {
+            const statusDiv = document.getElementById('operations-status');
+            if (!progressManager) {
+                statusDiv.innerHTML = `<div class="status error">❌ ProgressManager não inicializado</div>`;
+                return;
+            }
+
+            try {
+                progressManager.completeModule('1', 85);
+                statusDiv.innerHTML = `<div class="status success">✅ Módulo 1 completado com 85%</div>`;
+            } catch (error) {
+                statusDiv.innerHTML = `<div class="status error">❌ Erro ao completar módulo: ${error.message}</div>`;
+            }
+        }
+
+        async function testAudioCompletion() {
+            const statusDiv = document.getElementById('operations-status');
+            if (!progressManager) {
+                statusDiv.innerHTML = `<div class="status error">❌ ProgressManager não inicializado</div>`;
+                return;
+            }
+
+            try {
+                await progressManager.markAudioAsCompleted('1');
+                statusDiv.innerHTML = `<div class="status success">✅ Áudio do módulo 1 marcado como concluído</div>`;
+            } catch (error) {
+                statusDiv.innerHTML = `<div class="status error">❌ Erro ao marcar áudio: ${error.message}</div>`;
+            }
+        }
+
+        async function testFinalEvaluation() {
+            const statusDiv = document.getElementById('operations-status');
+            if (!progressManager) {
+                statusDiv.innerHTML = `<div class="status error">❌ ProgressManager não inicializado</div>`;
+                return;
+            }
+
+            try {
+                progressManager.completeFinalEvaluation(75);
+                statusDiv.innerHTML = `<div class="status success">✅ Avaliação final completada com 75%</div>`;
+            } catch (error) {
+                statusDiv.innerHTML = `<div class="status error">❌ Erro na avaliação final: ${error.message}</div>`;
+            }
+        }
+
+        async function showCurrentProgress() {
+            const statusDiv = document.getElementById('current-progress');
+            if (!progressManager) {
+                statusDiv.innerHTML = `<div class="status error">❌ ProgressManager não inicializado</div>`;
+                return;
+            }
+
+            try {
+                const overallProgress = progressManager.getOverallProgress();
+                const progressData = progressManager.progress;
+                
+                statusDiv.innerHTML = `
+                    <div class="status info">
+                        <h4>Progresso Geral: ${overallProgress}%</h4>
+                        <pre>${JSON.stringify(progressData, null, 2)}</pre>
+                    </div>
+                `;
+            } catch (error) {
+                statusDiv.innerHTML = `<div class="status error">❌ Erro ao mostrar progresso: ${error.message}</div>`;
+            }
+        }
+
+        async function resetProgress() {
+            const statusDiv = document.getElementById('reset-status');
+            if (!progressManager) {
+                statusDiv.innerHTML = `<div class="status error">❌ ProgressManager não inicializado</div>`;
+                return;
+            }
+
+            try {
+                progressManager.resetProgress();
+                statusDiv.innerHTML = `<div class="status success">✅ Progresso resetado com sucesso</div>`;
+            } catch (error) {
+                statusDiv.innerHTML = `<div class="status error">❌ Erro ao resetar progresso: ${error.message}</div>`;
+            }
+        }
+
+        // Teste automático ao carregar a página
+        window.addEventListener('load', async () => {
+            await testBackendConnection();
+        });
+    </script>
+</body>
+</html> 

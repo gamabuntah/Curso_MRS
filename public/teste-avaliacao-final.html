@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Avaliação Final</title>
+</head>
+<body>
+    <h1>Teste de Carregamento da Avaliação Final</h1>
+    <div id="resultado"></div>
+
+    <!-- Carrega o arquivo da avaliação final -->
+    <script src="data/browser/questoes-otimizadas/avaliacaoFinal.js"></script>
+    
+    <script>
+        const resultado = document.getElementById('resultado');
+        
+        // Verifica se a variável está disponível
+        if (typeof window.avaliacaoFinal !== 'undefined') {
+            resultado.innerHTML = `
+                <h2>✅ Avaliação Final Carregada com Sucesso!</h2>
+                <p><strong>Título:</strong> ${window.avaliacaoFinal.title}</p>
+                <p><strong>Número de questões:</strong> ${window.avaliacaoFinal.questoes ? window.avaliacaoFinal.questoes.length : 'N/A'}</p>
+                <p><strong>Descrição:</strong> ${window.avaliacaoFinal.descricao}</p>
+                <p><strong>Configurações:</strong></p>
+                <ul>
+                    <li>Tempo limite: ${window.avaliacaoFinal.configuracoes.tempoLimite} minutos</li>
+                    <li>Nota mínima: ${window.avaliacaoFinal.configuracoes.notaMinima}</li>
+                    <li>Total de questões: ${window.avaliacaoFinal.configuracoes.totalQuestoes}</li>
+                </ul>
+            `;
+        } else {
+            resultado.innerHTML = `
+                <h2>❌ Erro: Avaliação Final não foi carregada</h2>
+                <p>window.avaliacaoFinal está undefined</p>
+            `;
+        }
+        
+        // Log para debug
+        console.log('window.avaliacaoFinal:', window.avaliacaoFinal);
+    </script>
+</body>
+</html> 

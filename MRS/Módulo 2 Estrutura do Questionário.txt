@@ -1,0 +1,50 @@
+Módulo 2: Estrutura do Questionário MRS da PNSB 2024 e Caracterização do Prestador de Serviço
+
+
+Resumo
+O texto apresenta o Módulo 2 do questionário PNSB 2024, focado na caracterização dos prestadores de serviços de limpeza urbana e manejo de resíduos sólidos. Ele detalha a estrutura do questionário, que inclui blocos para identificação do município e do prestador, além do responsável pelas informações. O módulo principal, CZP: Caracterização do Prestador de Serviço, visa identificar quem executa, direta ou indiretamente, uma vasta gama de serviços, desde a coleta de lixo doméstico até o tratamento de resíduos e limpeza de praias. Por fim, o questionário investiga a área de atuação, natureza jurídica e esfera administrativa do prestador, oferecendo um panorama completo da entidade responsável pelos serviços de saneamento básico.
+
+
+O questionário da Pesquisa Nacional de Saneamento Básico (PNSB) 2024, especificamente para Limpeza Urbana e Manejo de Resíduos Sólidos e Drenagem e Manejo de Águas Pluviais [1], é uma ferramenta essencial para a coleta de dados [2]. Ele é organizado em blocos temáticos para facilitar o preenchimento [3].
+2.1 Blocos do Questionário de Limpeza Urbana e Manejo de Resíduos Sólidos (MRS)
+Os questionários da PNSB 2024 serão preenchidos online ou em PDF editável [2]. Para o preenchimento correto, é indispensável a utilização do Manual de Coleta [2, 3]. As expressões e conceitos que exigem esclarecimento estão definidos no manual ou no próprio questionário [3].
+Os blocos iniciais do questionário MRS são [4]:
+•
+IDM: Identificação do Município Pesquisado [4]
+◦
+Este bloco é destinado à identificação do município para o qual as informações estão sendo coletadas [4].
+•
+IDP: Identificação do Prestador de Serviço no Município Pesquisado [4]
+◦
+Este bloco serve para identificar a entidade (pública ou privada) prestadora do serviço no município em questão [4].
+•
+RSP: Responsável pela Informação do Prestador de Serviço [4]
+◦
+Este bloco deve ser preenchido obrigatoriamente e é crucial garantir que a pessoa indicada para o preenchimento detenha ou possa obter as informações sobre o prestador dos serviços para assegurar a qualidade dos dados [5].
+2.2 CZP: Caracterização do Prestador de Serviço
+O bloco de Caracterização do Prestador de Serviço (CZP) tem como objetivo principal identificar o responsável pela execução dos diversos serviços de limpeza urbana e manejo de resíduos sólidos [6].
+•
+Objetivos da Caracterização do Prestador de Serviço [6]:
+◦
+Identificar o responsável pela coleta convencional de resíduos sólidos domésticos, coleta convencional de resíduos públicos, coleta seletiva, varrição de vias e logradouros públicos, capina e/ou raspagem de vias e logradouros públicos, demais serviços de limpeza urbana, coleta de resíduos especiais, coleta de resíduos sujeitos à logística reversa, limpeza de estruturas de drenagem de águas pluviais, limpeza de praias, tratamento de resíduos secos, tratamento de resíduos sólidos orgânicos e disposição final [6, 7].
+•
+Execução de serviços de limpeza urbana e manejo de resíduos sólidos (direta e/ou indiretamente) [7, 8]:
+◦
+A primeira questão chave é se, em 2024, o prestador executou, direta e/ou indiretamente (através de contratação de terceiros), algum serviço de limpeza urbana e manejo de resíduos sólidos no município pesquisado [7]. Se a resposta for "Não", o questionário é encerrado [7].
+•
+Serviços executados DIRETAMENTE (o próprio prestador realiza o serviço, e NÃO contrata outra empresa) [7-9]:
+◦
+O informante deve indicar os serviços que presta diretamente, mesmo que terceirize algum deles [9]. Caso terceirize totalmente os serviços, deve marcar a opção correspondente [9]. Os serviços são [7, 8]: * Coleta convencional de resíduos sólidos domésticos: Refere-se à coleta de resíduos sólidos gerados nas residências, incluindo materiais orgânicos (restos de alimentos, madeira, dejetos humanos) ou inorgânicos (embalagens, vidros, papéis) [10, 11]. * Coleta convencional de resíduos públicos: Consiste no recolhimento de resíduos originados em espaços públicos como parques, praças e ruas, compostos por papéis, plásticos, latas e outros materiais descartados pela população [11, 12]. Esses resíduos são coletados diretamente na fonte geradora e encaminhados para destinação final [12]. * Coleta seletiva: Envolve a coleta e/ou recebimento e/ou processamento de resíduos previamente separados conforme sua constituição ou composição (plástico, papel, metal e vidro) [12, 13]. Descartar esses materiais corretamente reduz o lixo em aterros e fomenta o reuso e a reciclagem [13, 14]. * Varrição de vias e logradouros públicos: Realizada para remover resíduos como folhas, galhos, papel, plástico, garrafas e outros materiais acumulados nas vias públicas [14]. * Capina e/ou raspagem de vias e logradouros públicos: Atividades de limpeza para remoção ou corte, rente ao solo, de cobertura vegetal indesejada em passeios, canteiros centrais e faixas de rolamento, utilizando meios manuais ou mecânicos [14, 15]. * Demais serviços de limpeza urbana: Inclui serviços como limpeza de feiras e/ou mercados públicos, remoção de animais mortos, poda de árvores, pintura de meio-fio/guias, e limpeza de espelhos d'água e margens de cursos d'água [15, 16]. Se a limpeza de espelhos d'água ou margens de cursos d'água for assinalada, o questionário de Drenagem e Manejo de Águas Pluviais deve ser aplicado [16]. * Coleta/recebimento de resíduos sólidos especiais: Trata de resíduos como baterias, pilhas e remédios vencidos, que exigem cuidados adicionais por serem perigosos e conterem metais pesados, podendo causar doenças ou degradação ambiental se não forem manejados de forma responsável [16, 17]. * Coleta de resíduos sólidos sujeitos à logística reversa: Envolve a coleta de itens como vidros, lâmpadas e eletroeletrônicos [17]. A Logística Reversa é um instrumento que viabiliza a coleta e restituição desses resíduos ao setor empresarial para reaproveitamento ou destinação final ambientalmente adequada [17, 18]. * Limpeza de estruturas de drenagem de águas pluviais: Inclui a limpeza de bocas de lobo e galerias de água pluvial, parques lineares, "piscinões" e reservatórios de águas pluviais [18, 19]. Se este item for assinalado, o questionário de Drenagem e Manejo de Águas Pluviais deve ser aplicado [19]. * Limpeza de praias: Considera tanto praias litorâneas quanto praias de rios [20, 21]. * Processamento de resíduos sólidos secos: Conjunto de técnicas para tratar, separar, reaproveitar e eliminar resíduos sem umidade significativa, como papel, plástico, vidro e metais. Inclui triagem, reutilização, reciclagem e incineração [21-23]. * Processamento de resíduos sólidos orgânicos: Principalmente o processo de compostagem, que decompõe matéria orgânica (restos de frutas, verduras, legumes) para produzir adubo, enriquecendo o solo e evitando queimadas [23-25]. * Disposição final: Refere-se ao local e método de armazenamento definitivo de resíduos sólidos que não podem ser reaproveitados. Os métodos podem ser adequados (aterros sanitários e aterros inertes) ou não adequados (lixões e aterros controlados) [25, 26]. * Outro(s) [26] e Não executou nenhum serviço DIRETAMENTE [26].
+•
+Área de atuação (direta e indiretamente) [26-28]:
+◦
+É questionado se a abrangência territorial do serviço executado/contratado foi "Somente no município pesquisado" ou "No município pesquisado e em outros municípios" [28].
+•
+Natureza jurídica do prestador de serviço [27, 28]:
+◦
+Define a forma jurídica pela qual o prestador de serviço de limpeza urbana e manejo de resíduos sólidos foi constituído no município, conforme a Classificação Nacional de Pessoas Jurídicas (CONCLA) [28]. As opções são [27-33]: * Administração direta do poder público: Conjunto de órgãos e serviços ligados diretamente ao Poder Executivo (federal, estadual ou municipal) e órgãos auxiliares [29, 30]. * Autarquia: Parte da administração indireta, criada por lei para executar atividades da Administração Pública, com personalidade jurídica de direito público e autonomia [30]. * Empresa pública: Entidade paraestatal, criada por lei, com personalidade jurídica de direito privado e participação exclusiva do poder público no capital e direção [30, 31]. * Sociedade de economia mista: Entidade paraestatal, criada por lei, com capital público e privado, mas com maioria pública nas ações com direito a voto e gestão exclusiva pública [31]. * Consórcio público: Entidade pública resultante de acordo formal entre dois ou mais municípios, estados ou entre municípios, estados e a União [31, 32]. * Empresa privada: Possui capital predominante ou integralmente privado, administrada exclusivamente por particulares [32]. * Fundação (pública ou privada): Entidades dotadas de personalidade jurídica de direito privado (sem fins lucrativos para as públicas) [32, 33]. * Associação, cooperativa e afins: Entidade da sociedade civil organizada, sem fins lucrativos, com delegação para a administração dos serviços [33]. * Outra [33].
+•
+Esfera administrativa do prestador de serviço [27, 34]:
+◦
+Indica a esfera governamental ou privada à qual o prestador de serviço pertence [34]: * Federal [34]. * Estadual [34]. * Municipal [34]. * Privada [34]. * Interfederativa (reúne diferentes entes federativos) [34]. * Intermunicipal (reúne Municípios) [34].
+--------------------------------------------------------------------------------

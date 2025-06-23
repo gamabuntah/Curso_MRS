@@ -1,0 +1,7 @@
+[
+  "public/**/*.map",
+  "public/**/*.bak",
+  "public/**/*.backup",
+  "public/data/**",
+  "public/MRS/Audios/*.txt"
+]

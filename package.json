@@ -1,0 +1,32 @@
+{
+  "name": "curso-mrs-certificacao",
+  "version": "1.0.0",
+  "description": "Sistema de Certificação para Curso MRS - Manejo de Resíduos Sólidos",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js",
+    "install": "cd backend && npm install",
+    "build": "echo 'Build concluído'"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "keywords": [
+    "educacao",
+    "certificacao",
+    "mrs",
+    "residuos-solidos",
+    "nodejs",
+    "express"
+  ],
+  "author": "Sistema MRS",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

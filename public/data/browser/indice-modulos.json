@@ -1,0 +1,57 @@
+{
+  "curso": "Manejo de Resíduos Sólidos",
+  "sigla": "MRS",
+  "totalModulos": 7,
+  "modulos": [
+    {
+      "id": 1,
+      "titulo": "Módulo 1: Introdução ao Saneamento Básico e à PNSB",
+      "audio": "Curso MRS - Mod 1.wav",
+      "cards": 11,
+      "secoes": 5
+    },
+    {
+      "id": 2,
+      "titulo": "Módulo 2: Estrutura do Questionário MRS da PNSB 2024 e Caracterização do Prestador de Serviço",
+      "audio": "Curso MRS - Mod 2.wav",
+      "cards": 8,
+      "secoes": 2
+    },
+    {
+      "id": 3,
+      "titulo": "Módulo 3: Aspectos Legais, Terceirização e Coleta Convencional",
+      "audio": "Curso MRS - Mod 3.wav",
+      "cards": 9,
+      "secoes": 3
+    },
+    {
+      "id": 4,
+      "titulo": "Módulo 4: MRS em Áreas Especiais e Coleta Seletiva",
+      "audio": "Curso MRS - Mod 4.wav",
+      "cards": 8,
+      "secoes": 2
+    },
+    {
+      "id": 5,
+      "titulo": "Módulo 5: Manejo de Resíduos Sólidos Especiais (ESP)",
+      "audio": "Curso MRS - Mod 5.wav",
+      "cards": 11,
+      "secoes": 5
+    },
+    {
+      "id": 6,
+      "titulo": "Módulo 6: Unidades de Destinação/Disposição Final (DIS)",
+      "audio": "Curso MRS - Mod 6.wav",
+      "cards": 14,
+      "secoes": 8
+    },
+    {
+      "id": 7,
+      "titulo": "Módulo 7: Entidades de Catadores, Veículos e Educação Ambiental",
+      "audio": "Curso MRS - Mod 7.wav",
+      "cards": 9,
+      "secoes": 3
+    }
+  ],
+  "dataGeracao": "2025-06-22T06:39:56.646Z"
+}

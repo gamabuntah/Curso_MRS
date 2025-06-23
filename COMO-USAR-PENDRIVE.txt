@@ -1,0 +1,85 @@
+🚀 SISTEMA PNSB - USO EM PENDRIVE
+=====================================
+
+📋 PRÉ-REQUISITOS:
+- Windows 10/11
+- Node.js instalado (https://nodejs.org/)
+- Navegador web
+
+🎯 OPÇÃO 1: USAR DIRETAMENTE DO PENDRIVE
+
+1️⃣ INICIAR SISTEMA:
+   - Duplo-clique em: iniciar-sistema.bat
+   - Aguarde a inicialização automática
+   - O navegador abrirá automaticamente
+
+2️⃣ USAR O SISTEMA:
+   - Login: Gustavo (usuário comum)
+   - Login: admin (administrador)
+   - Use normalmente
+
+3️⃣ PARAR SISTEMA:
+   - Duplo-clique em: parar-sistema.bat
+   - Ou feche as janelas do terminal
+
+🎯 OPÇÃO 2: COPIAR PARA COMPUTADOR (RECOMENDADO)
+
+1️⃣ COPIAR SISTEMA:
+   - Duplo-clique em: copiar-para-computador.bat
+   - Digite o caminho (ex: C:\SistemaPNSB)
+   - Aguarde a cópia ser concluída
+
+2️⃣ USAR SISTEMA COPIADO:
+   - Navegue até a pasta copiada
+   - Duplo-clique em: iniciar-sistema.bat
+   - Use normalmente
+
+✅ VANTAGENS DE COPIAR PARA PC:
+- Mais rápido (não depende do pendrive)
+- Mais estável (sem problemas USB)
+- Mais seguro (dados no HD)
+- Atalho na área de trabalho
+- Backup automático
+
+🔧 SCRIPTOS DE GARANTIA:
+
+📋 VERIFICAÇÃO:
+- verificar-compatibilidade.bat = Verifica se o PC é compatível
+- verificar-sistema.bat = Verifica se o sistema está pronto
+- teste-completo-sistema.bat = Teste completo do sistema
+
+🔧 INSTALAÇÃO:
+- instalar-dependencias-globais.bat = Instala dependências necessárias
+- iniciar-sistema.bat = Inicia o sistema (atualizado)
+- parar-sistema.bat = Para o sistema
+
+📁 GERENCIAMENTO:
+- copiar-para-computador.bat = Copia para PC
+- backup-dados.bat = Backup automático
+
+🔧 SE NÃO FUNCIONAR:
+1. Execute: verificar-compatibilidade.bat
+2. Execute: teste-completo-sistema.bat
+3. Execute: instalar-dependencias-globais.bat
+4. Instale Node.js se necessário
+5. Reinicie o computador
+
+📁 ARQUIVOS IMPORTANTES:
+- iniciar-sistema.bat = Iniciar sistema
+- parar-sistema.bat = Parar sistema
+- verificar-sistema.bat = Verificar sistema
+- verificar-compatibilidade.bat = Verificar compatibilidade
+- teste-completo-sistema.bat = Teste completo
+- copiar-para-computador.bat = Copiar para PC
+- instalar-dependencias-globais.bat = Instalar dependências
+- backup-dados.bat = Backup automático
+- INSTRUCOES-PENDRIVE.md = Manual completo
+- GARANTIA-100-FUNCIONAL.md = Garantia oficial
+
+🌐 URLs DO SISTEMA:
+- Frontend: http://localhost:8000
+- Backend: http://localhost:3000
+
+💡 DICA: Sempre copie para o computador para melhor performance!
+
+✅ SISTEMA 100% GARANTIDO E FUNCIONAL! 

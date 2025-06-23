@@ -1,0 +1,99 @@
+{
+  "curso": {
+    "nome": "Manejo de Resíduos Sólidos",
+    "sigla": "MRS",
+    "descricao": "Capacitação em Limpeza e Manejo de Resíduos Sólidos",
+    "versao": "1.0.0",
+    "dataCriacao": "2025-06-21T07:22:35.522Z"
+  },
+  "sistema": {
+    "portas": {
+      "backend": 3002,
+      "frontend": 8001
+    },
+    "modulos": {
+      "total": 7,
+      "questoesPorModulo": 15,
+      "avaliacaoFinal": 50,
+      "totalQuestoes": 155
+    },
+    "layout": {
+      "paletaCores": {
+        "primaria": "#2B2D3A",
+        "secundaria": "#6C63FF",
+        "accent": "#00E599",
+        "fundo": "#F5F6FA",
+        "texto": "#22223B"
+      },
+      "tiposCards": [
+        "default",
+        "dica",
+        "atencao",
+        "exemplo",
+        "duvidas",
+        "resumo visual"
+      ]
+    }
+  },
+  "modulos": [
+    {
+      "id": 1,
+      "titulo": "Introdução ao Saneamento Básico e Fundamentos",
+      "arquivo": "Módulo 1 Introdução ao Saneamento B.txt",
+      "audio": "Curso MRS - Mod 1.wav"
+    },
+    {
+      "id": 2,
+      "titulo": "Estrutura do Questionário e Caracterização do Prestador",
+      "arquivo": "Módulo 2 Estrutura do Questionário.txt",
+      "audio": "Curso MRS - Mod 2.wav"
+    },
+    {
+      "id": 3,
+      "titulo": "Aspectos Legais, Terceirização e Coleta Convencional",
+      "arquivo": "Módulo 3 Aspectos Legais, Terceiriz.txt",
+      "audio": "Curso MRS - Mod 3.wav"
+    },
+    {
+      "id": 4,
+      "titulo": "MRS em Áreas Especiais e Coleta Seletiva",
+      "arquivo": "Módulo 4 MRS em Áreas Especiais e C.txt",
+      "audio": "Curso MRS - Mod 4.wav"
+    },
+    {
+      "id": 5,
+      "titulo": "Manejo de Resíduos Sólidos Especiais",
+      "arquivo": "Módulo 5 Manejo de Resíduos Sólidos.txt",
+      "audio": "Curso MRS - Mod 5.wav"
+    },
+    {
+      "id": 6,
+      "titulo": "Unidades de Destinação e Disposição Final",
+      "arquivo": "Módulo 6 Unidades de DestinaçãoDisp.txt",
+      "audio": "Curso MRS - Mod 6.wav"
+    },
+    {
+      "id": 7,
+      "titulo": "Entidades de Catadores, Veículos e Educação Ambiental",
+      "arquivo": "Módulo 7 Entidades de Catadores, Ve.txt",
+      "audio": "Curso MRS - Mod 7.wav"
+    }
+  ],
+  "certificado": {
+    "titulo": "Certificado de Conclusão",
+    "subtitulo": "Manejo de Resíduos Sólidos",
+    "emissor": "Sistema de Capacitação MRS",
+    "validade": "Indefinida",
+    "incluirQRCode": true,
+    "incluirData": true,
+    "incluirNota": true
+  },
+  "transformacao": {
+    "dataInicio": "2025-06-21T07:22:35.522Z",
+    "fase": "configuracao",
+    "scriptsExecutados": [
+      "criar-config-mrs.js"
+    ],
+    "status": "em_andamento"
+  }
+}
