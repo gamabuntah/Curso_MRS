@@ -158,7 +158,7 @@ Após seguir estas instruções, o sistema estará funcionando perfeitamente em 
 
 **URLs do Sistema:**
 - 🌐 Frontend: http://localhost:8000
-- 🔧 Backend: http://localhost:3000
+- 🔧 Backend: http://localhost:3002
 
 **Usuários de Teste:**
 - 👤 Gustavo (usuário comum)

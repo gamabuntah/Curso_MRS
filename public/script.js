@@ -68,10 +68,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         // Adiciona o link do painel de admin se o usuário for admin
         if (userRole === 'admin' && domElements.sidebarFooter) {
-            const adminLink = document.createElement('a');
-            adminLink.href = 'admin.html';
-            adminLink.innerHTML = '<i class="fa-solid fa-user-shield"></i> Painel do Admin';
-            domElements.sidebarFooter.prepend(adminLink);
+            // Evita duplicidade do botão
+            if (!domElements.sidebarFooter.querySelector('.admin-link')) {
+                const adminLink = document.createElement('a');
+                adminLink.href = 'admin.html';
+                adminLink.className = 'admin-link';
+                adminLink.innerHTML = '<i class="fa-solid fa-user-shield"></i> Painel do Admin';
+                domElements.sidebarFooter.prepend(adminLink);
+            }
         }
 
         // Inicializa o ProgressManager com o usuário e carrega os dados

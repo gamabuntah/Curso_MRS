@@ -10,7 +10,7 @@ class ProgressManager {
         this.username = username;
         this.role = role;
         this.progress = {};
-        this.API_URL = `http://localhost:3002/api/progress/${this.username}`;
+        this.API_URL = `https://curso-mrs.onrender.com/api/progress/${this.username}`;
         this.localCacheKey = `progress_${this.username}`;
         this.syncTimeout = null;
     }

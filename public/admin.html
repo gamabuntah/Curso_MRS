@@ -329,11 +329,11 @@
         async function loadOverviewData() {
             try {
                 // Carrega dados de usuários
-                const usersResponse = await fetch(`http://localhost:3000/api/admin/all-progress?adminUser=${currentUser}`);
+                const usersResponse = await fetch(`https://curso-mrs.onrender.com/api/admin/all-progress?adminUser=${currentUser}`);
                 const usersData = await usersResponse.json();
 
                 // Carrega dados de certificados
-                const certsResponse = await fetch(`http://localhost:3000/api/admin/all-certificates?adminUser=${currentUser}`);
+                const certsResponse = await fetch(`https://curso-mrs.onrender.com/api/admin/all-certificates?adminUser=${currentUser}`);
                 const certsData = await certsResponse.json();
 
                 // Atualiza estatísticas
@@ -353,7 +353,7 @@
 
         async function loadUsersData() {
             try {
-                const response = await fetch(`http://localhost:3000/api/admin/all-progress?adminUser=${currentUser}`);
+                const response = await fetch(`https://curso-mrs.onrender.com/api/admin/all-progress?adminUser=${currentUser}`);
                 const usersData = await response.json();
 
                 const tbody = document.getElementById('usersTableBody');
@@ -394,7 +394,7 @@
 
         async function loadCertificatesData() {
             try {
-                const response = await fetch(`http://localhost:3000/api/admin/all-certificates?adminUser=${currentUser}`);
+                const response = await fetch(`https://curso-mrs.onrender.com/api/admin/all-certificates?adminUser=${currentUser}`);
                 const certsData = await response.json();
 
                 const tbody = document.getElementById('certificatesTableBody');
@@ -448,7 +448,7 @@
             }
 
             try {
-                const response = await fetch(`http://localhost:3000/api/certificates/${username}/revoke?adminUser=${currentUser}`, {
+                const response = await fetch(`https://curso-mrs.onrender.com/api/certificates/${username}/revoke?adminUser=${currentUser}`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ reason: 'Revogado pelo administrador' })

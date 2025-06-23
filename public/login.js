@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const registerBtn = document.getElementById('register-btn');
     const errorMessageDiv = document.getElementById('error-message');
 
-    const API_URL = 'http://localhost:3002/api';
+    const API_URL = 'https://curso-mrs.onrender.com/api';
     let isLoading = false;
 
     // Função para mostrar mensagens de erro/sucesso

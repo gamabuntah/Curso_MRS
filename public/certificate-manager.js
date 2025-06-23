@@ -12,7 +12,7 @@ class CertificateManager {
         this.username = username;
         this.progressManager = progressManager;
         this.certificateData = null;
-        this.API_URL = `http://localhost:3002/api/certificates/${this.username}`;
+        this.API_URL = `https://curso-mrs.onrender.com/api/certificates/${this.username}`;
         this.VALIDATION_URL = 'http://localhost:8000/validate.html';
         this.isAdmin = this.progressManager.role === 'admin' || this.username.toLowerCase() === 'admin';
     }
@@ -210,7 +210,7 @@ class CertificateManager {
      */
     async validateCertificate(validationCode) {
         try {
-            const response = await fetch(`http://localhost:3002/api/certificates/validate/${validationCode}`);
+            const response = await fetch(`https://curso-mrs.onrender.com/api/certificates/validate/${validationCode}`);
             if (response.ok) {
                 return await response.json();
             } else {
@@ -270,7 +270,7 @@ class CertificateManager {
         }
 
         try {
-            const response = await fetch(`http://localhost:3002/api/admin/all-certificates?adminUser=${this.username}`);
+            const response = await fetch(`https://curso-mrs.onrender.com/api/admin/all-certificates?adminUser=${this.username}`);
             if (response.ok) {
                 return await response.json();
             } else {
