@@ -3,7 +3,7 @@
     --primary-color: #2b304f; /* Tom de azul escuro, mais sóbrio */
     --accent-color: #7b68ee; /* Roxo/Azul vibrante, como em Aave */
     --gradient-primary: linear-gradient(135deg, var(--accent-color) 0%, #5a67d8 100%);
-    --sidebar-width: 260px; /* Um pouco mais largo */
+    --sidebar-width: 260px; /* Largura compacta otimizada */
     --topbar-height: 70px;
     --text-primary: #ffffff;   /* Branco puro para máximo contraste */
     --text-secondary: #e2e8f0; /* Cinza claro, mais brilhante que antes */
@@ -19,6 +19,68 @@
     --gradient-success: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
     --gradient-warning: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
     --gradient-danger: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+/* --- LOADER SYSTEM --- */
+#page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 32, 44, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    backdrop-filter: blur(8px);
+    transition: opacity 0.3s ease;
+}
+
+.loader-content {
+    text-align: center;
+    color: var(--text-primary);
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(123, 104, 238, 0.3);
+    border-top: 4px solid var(--accent-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loader-content p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* --- PERFORMANCE OPTIMIZATIONS --- */
+* {
+    will-change: auto;
+}
+
+.sidebar, .main-content, .card {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Otimização de animações */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
 
 html {
@@ -52,7 +114,7 @@ body {
     color: var(--text-primary);
     width: var(--sidebar-width);
     height: 100vh;
-    padding: 25px;
+    padding: 20px 16px; /* Padding compacto para largura reduzida */
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease;
@@ -95,31 +157,34 @@ body {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    gap: 4px; /* Espaço entre os links reduzido */
+    gap: 8px; /* Espaço entre os links compacto para layout otimizado */
     overflow-y: auto;
     overflow-x: hidden;
+    padding-right: 8px; /* Espaço para o scrollbar */
 }
 
 #sidebar-nav a {
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Alinha no topo para texto multilinhas */
     justify-content: flex-start;
-    gap: 12px; /* Espaço entre ícone e texto reduzido */
-    padding: 6px 15px; /* Padding vertical ainda mais reduzido */
-    border-radius: 8px; /* Raio da borda sutilmente ajustado */
+    gap: 8px; /* Espaço entre ícone e texto compacto */
+    padding: 10px 10px; /* Padding compacto para layout otimizado */
+    border-radius: 8px;
     font-weight: 500;
-    font-size: 0.87rem; /* Tamanho da fonte do texto reduzido novamente */
-    color: #c1c9d4; /* Texto inativo mais claro para contraste */
+    font-size: 0.82rem; /* Tamanho da fonte compacto para layout otimizado */
+    color: #c1c9d4;
     text-decoration: none;
     transition: all 0.2s cubic-bezier(.4,0,.2,1);
     position: relative;
     border: none;
-    background: rgba(255, 255, 255, 0.02); /* Fundo do item quase imperceptível */
+    background: rgba(255, 255, 255, 0.02);
     text-align: left;
     width: 100%;
     box-shadow: 0 1px 4px 0 rgba(0,0,0,0.1);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); /* Sombra do texto mais nítida */
-    animation: pulse 2s infinite;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    min-height: 56px; /* Altura mínima compacta para layout otimizado */
+    height: auto; /* Permite altura automática */
+    max-height: none; /* Remove qualquer limitação de altura */
 }
 
 #sidebar-nav a:hover {
@@ -150,12 +215,14 @@ body {
 }
 
 #sidebar-nav a i {
-    font-size: 1.1rem; /* Tamanho do ícone ajustado para harmonizar */
-    width: 24px;
+    font-size: 1rem; /* Tamanho do ícone compacto */
+    width: 20px;
     text-align: center;
     color: #c1c9d4; /* Ícone inativo acompanha o texto */
     transition: color 0.2s cubic-bezier(.4,0,.2,1);
     filter: drop-shadow(0 1px 2px rgba(0,0,0,0.4));
+    flex-shrink: 0; /* Impede que o ícone seja comprimido */
+    margin-top: 2px; /* Alinha com o texto */
 }
 
 #sidebar-nav a:hover i,
@@ -165,9 +232,17 @@ body {
 }
 
 #sidebar-nav a span {
-    line-height: 1.3;
-    font-size: 0.88rem !important; /* Aumentado ligeiramente para o equilíbrio perfeito */
+    line-height: 1.3; /* Espaçamento entre linhas compacto */
+    font-size: 0.82rem !important; /* Tamanho compacto para layout otimizado */
     letter-spacing: 0.01em;
+    word-wrap: break-word; /* Permite quebra de palavras longas */
+    overflow-wrap: break-word; /* Fallback para quebra de palavras */
+    hyphens: auto; /* Adiciona hífens automáticos */
+    flex: 1; /* Permite que o texto ocupe o espaço disponível */
+    max-width: calc(100% - 36px); /* Espaço otimizado para layout compacto */
+    white-space: normal; /* Permite quebra de linha */
+    display: block; /* Garante que o texto pode quebrar em múltiplas linhas */
+    padding-top: 2px; /* Pequeno ajuste para alinhar com o ícone */
 }
 
 .sidebar-footer {
@@ -182,8 +257,8 @@ body {
 .sidebar-footer a, .logout-btn {
     display: flex;
     align-items: center;
-    gap: 15px;
-    padding: 12px 15px;
+    gap: 12px;
+    padding: 10px 12px;
     border-radius: 8px;
     font-weight: 500;
     font-size: 0.95rem;
@@ -1825,9 +1900,124 @@ body {
     transition: all 0.25s cubic-bezier(.4,0,.2,1);
 }
 #final-quiz-container .next-question-btn:hover {
-    background: linear-gradient(90deg, #38f9d7 0%, #43e97b 100%);
-    color: #fff;
-    border-color: #38f9d7;
-    transform: translateY(-2px) scale(1.04);
-    box-shadow: 0 12px 36px rgba(67, 233, 123, 0.28);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+/* --- MELHORIAS DE UX E INDICADORES VISUAIS --- */
+.loading-state {
+    opacity: 0.6;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.fade-in {
+    animation: fadeInSmooth 0.5s ease-out;
+}
+
+@keyframes fadeInSmooth {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.progress-toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+.progress-toast.show {
+    transform: translateX(0);
+}
+
+.progress-toast.success {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.progress-toast.error {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+/* Indicadores de progresso na sidebar melhorados */
+#sidebar-nav a {
+    position: relative;
+    overflow: hidden;
+}
+
+#sidebar-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, var(--accent-color) 50%, transparent 100%);
+    transition: width 0.3s ease;
+    width: 0;
+}
+
+#sidebar-nav a.progress-completed::after {
+    width: 100%;
+    background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+}
+
+#sidebar-nav a.progress-available::after {
+    width: 60%;
+    background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+}
+
+/* Melhorias no player de áudio */
+#audio-player {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+#audio-player:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Animações suaves para cards */
+.card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+    transform: translateY(-4px) scale(1.02);
+}
+
+/* Melhorias no quiz */
+#quiz-container .options label.option {
+    transition: all 0.2s ease;
+    transform: translateZ(0);
+}
+
+#quiz-container .options label.option:hover {
+    transform: translateX(5px) scale(1.02);
+}
+
+/* Smooth scrolling melhorado */
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 }

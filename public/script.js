@@ -3,6 +3,36 @@ document.addEventListener('DOMContentLoaded', async () => {
     const currentUser = sessionStorage.getItem('currentUser');
     const userRole = sessionStorage.getItem('userRole');
 
+    // Sistema de Cache para melhorar performance
+    const moduleCache = new Map();
+    const audioCache = new Map();
+    
+    // Preloader para melhor UX
+    const showLoader = () => {
+        const loader = document.createElement('div');
+        loader.id = 'page-loader';
+        loader.innerHTML = `
+            <div class="loader-content">
+                <div class="spinner"></div>
+                <p>Carregando...</p>
+            </div>
+        `;
+        loader.style.cssText = `
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(26, 32, 44, 0.9); display: flex; align-items: center;
+            justify-content: center; z-index: 9999; backdrop-filter: blur(5px);
+        `;
+        document.body.appendChild(loader);
+    };
+
+    const hideLoader = () => {
+        const loader = document.getElementById('page-loader');
+        if (loader) {
+            loader.style.opacity = '0';
+            setTimeout(() => loader.remove(), 300);
+        }
+    };
+
     // Mapeamento dos elementos do DOM
     const domElements = {
         sidebarNav: document.getElementById('sidebar-nav'),
@@ -50,80 +80,148 @@ document.addEventListener('DOMContentLoaded', async () => {
     let progressManager;
     let audioCompletedMarked = false;
 
+    // Função para precarregar áudios críticos
+    const preloadAudio = (src) => {
+        if (audioCache.has(src)) return audioCache.get(src);
+        
+        const audio = new Audio();
+        audio.preload = 'metadata';
+        audio.src = src;
+        audioCache.set(src, audio);
+        return audio;
+    };
+
+    // Sistema de notificações toast
+    const showToast = (message, type = 'info', duration = 3000) => {
+        const toast = document.createElement('div');
+        toast.className = `progress-toast ${type}`;
+        toast.innerHTML = `<i class="fa-solid fa-info-circle"></i> ${message}`;
+        
+        // Adiciona ícones específicos por tipo
+        if (type === 'success') {
+            toast.innerHTML = `<i class="fa-solid fa-check-circle"></i> ${message}`;
+        } else if (type === 'error') {
+            toast.innerHTML = `<i class="fa-solid fa-exclamation-circle"></i> ${message}`;
+        }
+        
+        document.body.appendChild(toast);
+        
+        // Mostra o toast
+        setTimeout(() => toast.classList.add('show'), 100);
+        
+        // Remove o toast após a duração especificada
+        setTimeout(() => {
+            toast.classList.remove('show');
+            setTimeout(() => toast.remove(), 300);
+        }, duration);
+    };
+
     // --- FUNÇÃO PRINCIPAL E INICIALIZAÇÃO ---
 
     async function main() {
+        showLoader();
+        
         if (!currentUser) {
+            hideLoader();
             window.location.href = 'login.html';
             return;
         }
 
-        // Adiciona lógica de logout
-        if(domElements.logoutBtn) {
-            domElements.logoutBtn.addEventListener('click', () => {
-                sessionStorage.removeItem('currentUser');
-                window.location.href = 'login.html';
-            });
-        }
-        
-        // Adiciona o link do painel de admin se o usuário for admin
-        if (userRole === 'admin' && domElements.sidebarFooter) {
-            // Evita duplicidade do botão
-            if (!domElements.sidebarFooter.querySelector('.admin-link')) {
-                const adminLink = document.createElement('a');
-                adminLink.href = 'admin.html';
-                adminLink.className = 'admin-link';
-                adminLink.innerHTML = '<i class="fa-solid fa-user-shield"></i> Painel do Admin';
-                domElements.sidebarFooter.prepend(adminLink);
+        try {
+            // Adiciona lógica de logout
+            if(domElements.logoutBtn) {
+                domElements.logoutBtn.addEventListener('click', () => {
+                    sessionStorage.removeItem('currentUser');
+                    window.location.href = 'login.html';
+                });
             }
-        }
-
-        // Inicializa o ProgressManager com o usuário e carrega os dados
-        progressManager = await new ProgressManager(currentUser, userRole).init();
-
-        // --- INTEGRAÇÃO CERTIFICADO ---
-        // Adiciona botão "Meu Certificado" se elegível
-        if (domElements.sidebarFooter) {
-            const certManager = new window.CertificateManager(currentUser, progressManager);
-            await certManager.loadCertificate();
-            // Admin sempre tem acesso, usuários normais precisam atender critérios
-            const isEligible = userRole === 'admin' || certManager.canIssueCertificate() || certManager.hasCertificate();
-            if (isEligible) {
-                let certLink = document.querySelector('.certificate-link');
-                if (!certLink) {
-                    certLink = document.createElement('a');
-                    certLink.href = '#';
-                    certLink.className = 'certificate-link';
-                    certLink.innerHTML = '<i class="fa-solid fa-certificate"></i> <span>Meu Certificado</span>';
-                    certLink.onclick = (e) => {
-                        e.preventDefault();
-                        window.showCertificateModal && window.showCertificateModal();
-                    };
-                    domElements.sidebarFooter.prepend(certLink);
+            
+            // Adiciona o link do painel de admin se o usuário for admin
+            if (userRole === 'admin' && domElements.sidebarFooter) {
+                // Evita duplicidade do botão
+                if (!domElements.sidebarFooter.querySelector('.admin-link')) {
+                    const adminLink = document.createElement('a');
+                    adminLink.href = 'admin.html';
+                    adminLink.className = 'admin-link';
+                    adminLink.innerHTML = '<i class="fa-solid fa-user-shield"></i> Painel do Admin';
+                    domElements.sidebarFooter.prepend(adminLink);
                 }
             }
-        }
 
-        if (!domElements.sidebarNav || !domElements.moduleTitle || !domElements.contentContainer) {
-            console.error('Elementos essenciais do DOM não foram encontrados.');
-            return;
+            // Inicializa o ProgressManager com o usuário e carrega os dados
+            progressManager = await new ProgressManager(currentUser, userRole).init();
+
+            // --- INTEGRAÇÃO CERTIFICADO ---
+            // Adiciona botão "Meu Certificado" se elegível
+            if (domElements.sidebarFooter) {
+                const certManager = new window.CertificateManager(currentUser, progressManager);
+                await certManager.loadCertificate();
+                // Admin sempre tem acesso, usuários normais precisam atender critérios
+                const isEligible = userRole === 'admin' || certManager.canIssueCertificate() || certManager.hasCertificate();
+                if (isEligible) {
+                    let certLink = document.querySelector('.certificate-link');
+                    if (!certLink) {
+                        certLink = document.createElement('a');
+                        certLink.href = '#';
+                        certLink.className = 'certificate-link';
+                        certLink.innerHTML = '<i class="fa-solid fa-certificate"></i> <span>Meu Certificado</span>';
+                        certLink.onclick = (e) => {
+                            e.preventDefault();
+                            window.showCertificateModal && window.showCertificateModal();
+                        };
+                        domElements.sidebarFooter.prepend(certLink);
+                    }
+                }
+            }
+
+            if (!domElements.sidebarNav || !domElements.moduleTitle || !domElements.contentContainer) {
+                console.error('Elementos essenciais do DOM não foram encontrados.');
+                hideLoader();
+                return;
+            }
+            
+            populateSidebar();
+            
+            // Recupera o módulo salvo no sessionStorage ou usa o módulo 1 como padrão
+            const savedModuleId = sessionStorage.getItem('currentModuleId') || '1';
+            
+            // Verifica se há um quiz final em andamento para ser retomado
+            const isResumingFinalQuiz = getFinalQuizState() !== null;
+
+            if (savedModuleId === 'final') {
+                // Se o usuário está na página da avaliação final
+                if (isResumingFinalQuiz) {
+                    // E há um quiz para retomar, inicia o quiz diretamente
+                    startFinalQuiz();
+                } else {
+                    // Senão, mostra a tela de introdução da avaliação
+                    startFinalEvaluation();
+                }
+            } else {
+                // Se o usuário está em qualquer outra página de módulo, apenas renderiza o módulo
+                renderModule(savedModuleId);
+            }
+
+            // Atualiza o link ativo na barra lateral
+            document.querySelectorAll('#sidebar-nav a').forEach(l => l.classList.remove('active'));
+            const activeLink = document.querySelector('.sidebar a[data-module="' + savedModuleId + '"]');
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+            updateProgressIndicator();
+            
+            // Precarrega áudios dos módulos principais
+            setTimeout(() => {
+                for (let i = 1; i <= 3; i++) {
+                    preloadAudio(`MRS/Audios/Curso MRS - Mod ${i}.mp3`);
+                }
+            }, 1000);
+            
+        } catch (error) {
+            console.error('Erro na inicialização:', error);
+        } finally {
+            hideLoader();
         }
-        
-        populateSidebar();
-        // Recupera o módulo salvo no sessionStorage ou usa o módulo 1 como padrão
-        const savedModuleId = sessionStorage.getItem('currentModuleId') || '1';
-        if (savedModuleId === 'final') {
-            startFinalEvaluation();
-        } else {
-            renderModule(savedModuleId);
-        }
-        // Atualiza o link ativo na barra lateral
-        document.querySelectorAll('#sidebar-nav a').forEach(l => l.classList.remove('active'));
-        const activeLink = document.querySelector('.sidebar a[data-module="' + savedModuleId + '"]');
-        if (activeLink) {
-            activeLink.classList.add('active');
-        }
-        updateProgressIndicator();
     }
 
     // --- FUNÇÕES DE LÓGICA (O restante do arquivo) ---
@@ -293,7 +391,21 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         domElements.playerModuleTitle.textContent = moduleTitle;
         domElements.audioPlayer.style.display = 'flex';
-        domElements.audioElement.src = audioSrc;
+        
+        // Usa áudio do cache se disponível para melhor performance
+        if (audioCache.has(audioSrc)) {
+            const cachedAudio = audioCache.get(audioSrc);
+            // Se o áudio já foi carregado, usa diretamente
+            if (cachedAudio.readyState >= 2) {
+                domElements.audioElement.src = cachedAudio.src;
+            } else {
+                domElements.audioElement.src = audioSrc;
+            }
+        } else {
+            domElements.audioElement.src = audioSrc;
+            // Adiciona ao cache para futuras utilizações
+            preloadAudio(audioSrc);
+        }
 
         // Reset a velocidade para o padrão quando um novo áudio é carregado
         currentSpeedIndex = 0;
@@ -317,6 +429,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (!audioCompletedMarked && progressPercent >= 98 && currentModuleId) {
                 progressManager.markAudioAsCompleted(currentModuleId);
                 audioCompletedMarked = true; // Impede que a função seja chamada múltiplas vezes
+                showToast('Áudio concluído com sucesso!', 'success');
             }
         };
 
@@ -446,6 +559,41 @@ document.addEventListener('DOMContentLoaded', async () => {
      * @param {string} moduleId - O ID do módulo a ser renderizado
      */
     function renderModule(moduleId) {
+        // Verifica cache primeiro
+        const cacheKey = `module_${moduleId}`;
+        if (moduleCache.has(cacheKey)) {
+            // LIMPEZA ANTES DO CACHE: Garante limpeza completa antes de aplicar cache
+            domElements.quizContainer.innerHTML = '';
+            domElements.finalQuizContainer.innerHTML = '';
+            domElements.finalScoreContainer.innerHTML = '';
+            
+            const introContainer = document.getElementById('final-quiz-intro-container');
+            if (introContainer) {
+                introContainer.innerHTML = '';
+                introContainer.style.display = 'none';
+                introContainer.removeAttribute('style');
+            }
+            
+            domElements.quizContainer.style.display = 'none';
+            domElements.finalQuizContainer.style.display = 'none';
+            domElements.finalScoreContainer.style.display = 'none';
+            
+            const dynamicStyles = document.querySelectorAll('style[data-final-quiz]');
+            dynamicStyles.forEach(style => style.remove());
+            
+            // Aplica conteúdo do cache
+            const cachedContent = moduleCache.get(cacheKey);
+            domElements.contentContainer.innerHTML = cachedContent.html;
+            domElements.contentContainer.style.display = 'block';
+            domElements.moduleTitle.textContent = cachedContent.title;
+            document.title = cachedContent.title;
+            currentModuleId = moduleId;
+            
+            // Reaplica event listeners para elementos cached
+            reapplyEventListeners(moduleId);
+            return;
+        }
+        
         const moduleData = modulos[moduleId];
         if (!moduleData) {
             console.error(`Módulo ${moduleId} não encontrado.`);
@@ -455,17 +603,31 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.title = moduleData.title; // Ajusta o título da página
 
         currentModuleId = moduleId;
-        // Limpa todos os contêineres de conteúdo e quiz
+        
+        // LIMPEZA COMPLETA: Limpa todos os contêineres de conteúdo e quiz
         domElements.contentContainer.innerHTML = '';
         domElements.contentContainer.style.display = 'block'; // Garante que o conteúdo seja visível
         domElements.quizContainer.innerHTML = '';
         domElements.finalQuizContainer.innerHTML = '';
         domElements.finalScoreContainer.innerHTML = '';
+        
+        // LIMPEZA DA AVALIAÇÃO FINAL: Remove completamente o container de introdução
+        const introContainer = document.getElementById('final-quiz-intro-container');
+        if (introContainer) {
+            introContainer.innerHTML = '';
+            introContainer.style.display = 'none';
+            // Remove estilos inline que podem ter sido aplicados
+            introContainer.removeAttribute('style');
+        }
 
-        // Garante que todos os contêineres de quiz/score estejam ocultos ao trocar de módulo
+        // OCULTAÇÃO DE TODOS OS CONTAINERS: Garante que todos estejam ocultos
         domElements.quizContainer.style.display = 'none';
         domElements.finalQuizContainer.style.display = 'none';
         domElements.finalScoreContainer.style.display = 'none';
+        
+        // LIMPEZA DE ESTILOS DINÂMICOS: Remove estilos que podem ter sido aplicados pela avaliação final
+        const dynamicStyles = document.querySelectorAll('style[data-final-quiz]');
+        dynamicStyles.forEach(style => style.remove());
 
         domElements.moduleTitle.textContent = moduleData.title;
 
@@ -510,19 +672,56 @@ document.addEventListener('DOMContentLoaded', async () => {
             startQuizButton.onclick = () => {
                 // Mostra o container do quiz
                 domElements.quizContainer.style.display = 'block';
-                // Rola suavemente até o contêiner do quiz
-                domElements.quizContainer.scrollIntoView({ behavior: 'smooth' });
-                // Chama a nova função de quiz genérica
+                // Primeiro renderiza o quiz para que o container tenha conteúdo e altura
                 renderQuiz(moduleData.quiz, quizConfigs.module);
+                // DEPOIS, rola suavemente até o contêiner do quiz
+                domElements.quizContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
             };
             
             domElements.contentContainer.appendChild(startQuizButton);
         }
 
+        // Cache o conteúdo renderizado para performance
+        moduleCache.set(cacheKey, {
+            html: domElements.contentContainer.innerHTML,
+            title: moduleData.title
+        });
+
         // Ao final da função renderModule
         const pageContainer = document.querySelector('.page-container');
         if (pageContainer) {
             pageContainer.scrollTop = 0;
+        }
+    }
+
+    /**
+     * Reaplica event listeners para elementos cached
+     * @param {string} moduleId - ID do módulo
+     */
+    function reapplyEventListeners(moduleId) {
+        const moduleData = modulos[moduleId];
+        
+        // Reaplica listener do card de áudio se existir
+        if (moduleData.audio) {
+            const audioCard = domElements.contentContainer.querySelector('.audio-card');
+            if (audioCard) {
+                // Remove listener anterior se existir
+                audioCard.onclick = null;
+                audioCard.onclick = () => setupAudioPlayer(moduleData.audio, `Áudio do Módulo: ${moduleData.title}`);
+            }
+        }
+
+        // Reaplica listener do botão de quiz se existir
+        if (moduleData.quiz) {
+            const startQuizButton = domElements.contentContainer.querySelector('.start-quiz-btn');
+            if (startQuizButton) {
+                startQuizButton.onclick = null;
+                startQuizButton.onclick = () => {
+                    domElements.quizContainer.style.display = 'block';
+                    renderQuiz(moduleData.quiz, quizConfigs.module);
+                    domElements.quizContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                };
+            }
         }
     }
 
@@ -792,20 +991,14 @@ document.addEventListener('DOMContentLoaded', async () => {
             quizNav.querySelector('.show-results-btn').addEventListener('click', () => showResults(config));
         }
 
-        // Scroll automático só se feedback/botão não estiver visível
-        if (config.containerId === 'final-quiz-container') {
-            setTimeout(() => {
-                const quizBox = document.getElementById('final-quiz-container');
-                if (quizBox) {
-                    const rect = quizBox.getBoundingClientRect();
-                    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-                    // Se o final do quiz não está visível, faz scroll
-                    if (rect.bottom > windowHeight - 40) {
-                        quizBox.scrollIntoView({ behavior: 'smooth', block: 'end' });
-                    }
-                }
-            }, 40);
-        }
+        // IMPROVEMENT: Rola a tela para o botão de navegação após a resposta.
+        // Usa um pequeno timeout para garantir que o DOM foi atualizado.
+        setTimeout(() => {
+            const navButton = quizNav.querySelector('.quiz-button');
+            if (navButton) {
+                navButton.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }, 100);
     }
 
     /**
@@ -898,9 +1091,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         score = 0;
 
         clearFinalQuizState();
-        domElements.finalQuizContainer.style.display = 'none';
-        let introContainer = document.getElementById('final-quiz-intro-container');
-        if (introContainer) introContainer.style.display = 'block';
     }
 
     /**
@@ -1013,6 +1203,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         domElements.audioPlayer.style.display = 'none';
         // Animações premium para os cards
         const styleCards = document.createElement('style');
+        styleCards.setAttribute('data-final-quiz', 'true'); // Marca para limpeza posterior
         styleCards.innerHTML = `
         @keyframes glowBorder {0%{box-shadow:0 8px 40px 0 #43e97b22,0 0 0 6px #7b68ee22;}100%{box-shadow:0 16px 56px 0 #7b68ee33,0 0 0 12px #43e97b44;}}
         @keyframes pulseIcon {0%{filter:drop-shadow(0 0 0 #43e97b44);}100%{filter:drop-shadow(0 0 12px #43e97b88);}}
@@ -1023,14 +1214,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     /**
      * Inicia o quiz da avaliação final
      */
-    function startFinalQuiz() {
-        document.getElementById('final-quiz-intro-container').style.display = 'none';
-        domElements.finalQuizContainer.style.display = 'block';
-        saveFinalQuizState(0);
-        renderQuiz(avaliacaoFinal, quizConfigs.final);
-    }
-
-    // --- Ajuste na função startFinalQuiz ---
     function startFinalQuiz() {
         document.getElementById('final-quiz-intro-container').style.display = 'none';
         domElements.finalQuizContainer.style.display = 'block';
@@ -1188,11 +1371,4 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // --- INICIA A APLICAÇÃO ---
     await main();
-
-    // Após carregar tudo, verifica se deve retomar quiz final
-    if (getFinalQuizState() !== null) {
-        startFinalQuiz();
-    } else {
-        main();
-    }
 }); 

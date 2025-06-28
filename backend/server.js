@@ -119,16 +119,34 @@ app.post('/api/register', async (req, res) => {
     return res.status(400).json({ message: 'Nome de usuário e senha são obrigatórios.' });
   }
 
+  // PROTEÇÃO DE SEGURANÇA: Bloquear criação de novos admins
+  if (username.toLowerCase() === 'admin' || username.toLowerCase().includes('admin')) {
+    return res.status(403).json({ 
+      message: 'Nome de usuário não permitido. Escolha outro nome.' 
+    });
+  }
+
+  // PROTEÇÃO EXTRA: Bloquear tentativas de criar usuários com nomes suspeitos
+  const bannedNames = ['administrator', 'root', 'superuser', 'moderator', 'manager'];
+  const foundBanned = bannedNames.find(name => username.toLowerCase().includes(name));
+  if (foundBanned) {
+    return res.status(403).json({ 
+      message: 'Nome de usuário não permitido. Escolha outro nome.' 
+    });
+  }
+
   try {
     const userExists = await prisma.mrs_users.findUnique({ where: { username } });
     if (userExists) {
       return res.status(409).json({ message: 'Este nome de usuário já existe.' });
     }
+    
+    // SEGURANÇA: Apenas usuários com role 'user' podem ser criados
     const newUser = await prisma.mrs_users.create({
       data: {
         username,
         passwordHash: simpleHash(password),
-        role: username.toLowerCase() === 'admin' ? 'admin' : 'user',
+        role: 'user', // SEMPRE 'user' - nunca 'admin'
       },
     });
     // Inicializa o progresso para o novo usuário
