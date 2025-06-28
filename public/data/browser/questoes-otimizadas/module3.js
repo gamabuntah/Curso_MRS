@@ -5,8 +5,12 @@ window.module3 = {
     {
       "type": "default",
       "title": "📋 Resumo do Módulo",
-      "content": "<p><strong>Módulo 3:</strong> Aspectos Legais, Terceirização e Coleta Convencional:</p><ul><li><strong>Aspectos legais:</strong> Estruturas legais que regulamentam os serviços de saneamento.</li><li><strong>Contratos:</strong> Tipos de contratos para delegação de serviços.</li><li><strong>Metas e ouvidorias:</strong> Importância das metas de universalização e participação cidadã.</li><li><strong>Terceirização:</strong> Atuação de empresas terceirizadas na limpeza urbana.</li><li><strong>Coleta e destinação:</strong> Métodos de varrição, capina, coleta e destinação final dos resíduos.</li></ul>",
-      "icon": "📋"
+      "content": "<p>Este material didático, parte do curso \"Saneamento Básico e a Pesquisa Nacional de Saneamento Básico (PNSB)\", detalha o Módulo 3: Aspectos Legais, Terceirização e Coleta Convencional. Ele explora as estruturas legais que regulamentam os serviços de saneamento, incluindo os diferentes tipos de contratos para a delegação de serviços e a importância de metas de universalização e ouvidorias para a participação cidadã. Além disso, aborda a atuação de empresas terceirizadas na limpeza urbana e no manejo de resíduos, e descreve os métodos de varrição, capina e coleta de resíduos domésticos e públicos, enfatizando a destinação final ambientalmente adequada versus práticas inadequadas como os \"lixões\".</p>"
+    },
+    {
+      "type": "default",
+      "title": "🎯 Introdução do Módulo",
+      "content": "<p>Este módulo aborda os instrumentos legais que regem a prestação de serviços de saneamento, a atuação de terceiros na limpeza urbana e manejo de resíduos sólidos, e detalha os processos de varrição, capina e coleta de resíduos domésticos e públicos, incluindo seus métodos e destinação final.</p>"
     },
     {
       "type": "default",

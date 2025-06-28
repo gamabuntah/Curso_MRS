@@ -5,8 +5,12 @@ window.module5 = {
     {
       "type": "default",
       "title": "📋 Resumo do Módulo",
-      "content": "<p><strong>Módulo 5:</strong> Manejo de Resíduos Sólidos Especiais:</p><ul><li><strong>Resíduos especiais:</strong> Tratamento diferenciado para resíduos perigosos ou de grande volume.</li><li><strong>Etapas:</strong> Coleta, recebimento, processamento e destinação final.</li><li><strong>Exemplos:</strong> RSS (serviços de saúde), RCC (construção civil), embalagens de agrotóxicos, pneus, pilhas, eletrônicos.</li><li><strong>Importância:</strong> Gestão adequada evita contaminação e impactos ambientais.</li></ul>",
-      "icon": "📋"
+      "content": "<p>Este módulo aprofunda o estudo do Manejo de Resíduos Sólidos (MRS) ao abordar os resíduos sólidos especiais, incluindo sua definição, características e formas de manejo. Explora as atividades geradoras desses resíduos, desde serviços de saúde até construção civil, detalhando as particularidades de cada categoria. O módulo também aborda o manejo de resíduos orgânicos, apresentando diferentes tecnologias de tratamento como compostagem, biodigestão e incineração, bem como suas vantagens e desvantagens. Além disso, examina os resíduos recicláveis secos, incluindo sua classificação, formas de coleta e beneficiamento, destacando a importância da separação adequada e dos processos de reciclagem. Por fim, discute os rejeitos, definindo-os como materiais sem possibilidade de reaproveitamento e apresentando as formas adequadas de disposição final, sempre considerando os impactos ambientais e as melhores práticas de gestão sustentável.</p>"
+    },
+    {
+      "type": "default",
+      "title": "🎯 Introdução do Módulo",
+      "content": "<p>Este módulo aprofunda o estudo do Manejo de Resíduos Sólidos (MRS) ao abordar os resíduos sólidos especiais, incluindo sua definição, características e formas de manejo adequado. O conteúdo visa proporcionar uma compreensão abrangente sobre as diferentes categorias de resíduos e suas especificidades técnicas.</p>"
     },
     {
       "type": "default",

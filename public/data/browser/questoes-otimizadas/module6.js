@@ -5,8 +5,14 @@ window.module6 = {
     {
       "type": "default",
       "title": "📋 Resumo do Módulo",
-      "content": "<p><strong>Módulo 6:</strong> Unidades de Destinação e Disposição Final:</p><ul><li><strong>Destinação ambientalmente adequada:</strong> Reciclagem, aterros sanitários, compostagem, incineração.</li><li><strong>Destinação não adequada:</strong> Lixões, aterros controlados.</li><li><strong>Caracterização:</strong> Tipos de unidades, métodos de pesagem, volume anual, tipos de resíduos recebidos.</li></ul>",
+      "content": "<p>O Módulo 6 detalha as unidades de destinação e disposição final de resíduos sólidos em municípios, distinguindo entre métodos ambientalmente adequados (como reciclagem e aterros sanitários) e não adequados (como lixões). O documento visa caracterizar essas unidades, abordando desde vazadouros a céu aberto e em áreas alagadas, que representam as práticas mais precárias sem controle ambiental, até unidades de incineração e compostagem, que visam tratamento e valorização dos resíduos. Além disso, descreve os aterros controlados e aterros sanitários, enfatizando a evolução do controle técnico para minimizar impactos. Para cada tipo, são coletadas informações sobre a responsabilidade operacional, o número de unidades, suas características físicas e operacionais, métodos de pesagem, o volume anual de resíduos e os tipos de resíduos recebidos, fornecendo um panorama abrangente da gestão de resíduos.</p>",
       "icon": "📋"
+    },
+    {
+      "type": "default",
+      "title": "🎯 Objetivo do Módulo",
+      "content": "<p><strong>Objetivo:</strong> Este módulo visa caracterizar as unidades de destinação/disposição final de resíduos sólidos existentes no município. As unidades incluem vazadouros, aterros, unidades de tratamento por incineração e unidades de compostagem, entre outras.</p>",
+      "icon": "🎯"
     },
     {
       "type": "default",

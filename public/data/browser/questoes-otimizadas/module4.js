@@ -5,8 +5,12 @@ window.module4 = {
     {
       "type": "default",
       "title": "📋 Resumo do Módulo",
-      "content": "<p><strong>Módulo 4:</strong> MRS em Áreas Especiais e Coleta Seletiva:</p><ul><li><strong>Áreas especiais:</strong> Desafios logísticos e operacionais em locais como terras indígenas, favelas e comunidades isoladas.</li><li><strong>Coleta seletiva:</strong> Conceito, materiais, sistema de cores do CONAMA e benefícios ambientais/econômicos.</li><li><strong>Processamento:</strong> Formas de coleta, processamento e destino final dos resíduos recicláveis e rejeitos.</li></ul>",
-      "icon": "📋"
+      "content": "<p>O Módulo 4, \"MRS em Áreas Especiais e Coleta Seletiva\", é uma seção de um curso sobre saneamento básico, focado em duas áreas cruciais da gestão de resíduos sólidos. A primeira parte aborda os desafios logísticos e operacionais do manejo de resíduos em \"áreas especiais\" como terras indígenas, favelas e comunidades isoladas, detalhando os serviços de limpeza urbana, métodos de coleta e o incentivo à separação de resíduos nessas regiões. A segunda parte explora a \"coleta seletiva\", explicando seu conceito como a segregação prévia de resíduos para reciclagem, listando os materiais, o sistema de cores do CONAMA e os múltiplos benefícios ambientais e econômicos. O módulo também descreve as diversas formas de coleta e processamento dos materiais, além de investigar o destino final dos resíduos recicláveis e dos rejeitos gerados.</p>"
+    },
+    {
+      "type": "default",
+      "title": "🎯 Introdução do Módulo",
+      "content": "<p>Este módulo explora os desafios e as abordagens do Manejo de Resíduos Sólidos (MRS) em áreas com características específicas e detalha os aspectos da coleta seletiva, um componente crucial para a gestão sustentável de resíduos.</p>"
     },
     {
       "type": "default",

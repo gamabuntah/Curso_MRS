@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -14,38 +8,65 @@ datasource db {
 }
 
 model mrs_users {
-  id        Int     @id @default(autoincrement())
-  username  String  @unique
+  id           Int                @id @default(autoincrement())
+  username     String             @unique
   passwordHash String
-  role      String  @default("user")
-  progress  mrs_progress?
+  role         String             @default("user")
   certificates mrs_certificates[]
+  progress     mrs_progress?
 }
 
 model mrs_progress {
-  id        Int     @id @default(autoincrement())
-  user      mrs_users @relation(fields: [userId], references: [id])
-  userId    Int  @unique
-  modules   Json
+  id               Int       @id @default(autoincrement())
+  userId           Int       @unique
+  modules          Json
   final_evaluation Json
-  certificate Json
-  lastUpdated DateTime @default(now())
+  certificate      Json
+  lastUpdated      DateTime  @default(now())
+  user             mrs_users @relation(fields: [userId], references: [id])
 }
 
 model mrs_certificates {
-  id        Int     @id @default(autoincrement())
-  username  String
-  validationCode String @unique
-  issuedDate DateTime
-  finalScore Int?
+  id               Int        @id @default(autoincrement())
+  username         String
+  validationCode   String     @unique
+  issuedDate       DateTime
+  finalScore       Int?
   completedModules Int?
-  status    String?
+  status           String?
   digitalSignature String?
-  validationCount Int? @default(0)
-  downloadCount Int? @default(0)
-  revokedDate DateTime?
-  revokedBy  String?
-  revokeReason String?
-  user      mrs_users? @relation(fields: [userId], references: [id])
-  userId    Int?
+  validationCount  Int?       @default(0)
+  downloadCount    Int?       @default(0)
+  revokedDate      DateTime?
+  revokedBy        String?
+  revokeReason     String?
+  userId           Int?
+  user             mrs_users? @relation(fields: [userId], references: [id])
+}
+
+model certificates {
+  id               Int       @id @default(autoincrement())
+  validation_code  String    @unique @db.VarChar(255)
+  username         String    @db.VarChar(255)
+  certificate_data Json
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+  users            users     @relation(fields: [username], references: [username], onDelete: Cascade, onUpdate: NoAction)
+}
+
+model progress {
+  id            Int       @id @default(autoincrement())
+  username      String    @db.VarChar(255)
+  progress_data Json
+  updated_at    DateTime? @default(now()) @db.Timestamp(6)
+  users         users     @relation(fields: [username], references: [username], onDelete: Cascade, onUpdate: NoAction)
+}
+
+model users {
+  id            Int            @id @default(autoincrement())
+  username      String         @unique @db.VarChar(255)
+  password_hash String         @db.VarChar(255)
+  role          String?        @default("user") @db.VarChar(50)
+  created_at    DateTime?      @default(now()) @db.Timestamp(6)
+  certificates  certificates[]
+  progress      progress[]
 }

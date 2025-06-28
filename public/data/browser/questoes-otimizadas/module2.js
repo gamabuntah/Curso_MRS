@@ -5,8 +5,14 @@ window.module2 = {
     {
       "type": "default",
       "title": "📋 Resumo do Módulo",
-      "content": "<p><strong>Módulo 2 do questionário PNSB 2024</strong> foca na caracterização dos prestadores de serviços de limpeza urbana e manejo de resíduos sólidos:</p><ul><li><strong>Estrutura do questionário:</strong> Blocos para identificação do município, do prestador e do responsável pelas informações.</li><li><strong>CZP:</strong> Caracterização do Prestador de Serviço, identificando quem executa serviços como coleta de lixo doméstico, tratamento de resíduos e limpeza de praias.</li><li><strong>Investigação:</strong> Área de atuação, natureza jurídica e esfera administrativa do prestador.</li></ul>",
+      "content": "<p><strong>O Módulo 2 do questionário PNSB 2024</strong> é focado na caracterização dos prestadores de serviços de limpeza urbana e manejo de resíduos sólidos. Ele detalha a estrutura do questionário, que inclui blocos para identificação do município e do prestador, além do responsável pelas informações.</p><p><strong>O módulo principal, CZP: Caracterização do Prestador de Serviço</strong>, visa identificar quem executa, direta ou indiretamente, uma vasta gama de serviços, desde a coleta de lixo doméstico até o tratamento de resíduos e limpeza de praias.</p><p><strong>Por fim, o questionário investiga</strong> a área de atuação, natureza jurídica e esfera administrativa do prestador, oferecendo um panorama completo da entidade responsável pelos serviços de saneamento básico.</p>",
       "icon": "📋"
+    },
+    {
+      "type": "default",
+      "title": "🎯 Introdução do Módulo",
+      "content": "<p><strong>O questionário da Pesquisa Nacional de Saneamento Básico (PNSB) 2024</strong>, especificamente para Limpeza Urbana e Manejo de Resíduos Sólidos e Drenagem e Manejo de Águas Pluviais, é uma ferramenta essencial para a coleta de dados.</p><p><strong>Ele é organizado em blocos temáticos</strong> para facilitar o preenchimento e garantir a qualidade das informações coletadas sobre os prestadores de serviços de saneamento básico.</p>",
+      "icon": "🎯"
     },
     {
       "type": "default",
